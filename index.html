@@ -1,828 +1,845 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JB Formation — Achat en Chine & Monétisation TikTok</title>
-  <meta name="description" content="Double formation : Achat en Chine (Alibaba) + Création & Monétisation TikTok. Réserve ta place !" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/logo.png" sizes="180x180">
+    <meta name="theme-color" content="#003366">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SEO: Social Preview -->
+    <meta property="og:title" content="JB Formation — Achat en Chine & Monétisation TikTok">
+    <meta property="og:description" content="Double formation : Achat en Chine (Alibaba) + Création & Monétisation TikTok. Réserve ta place !">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:url" content="https://jbformation.fobs.dev/">
 
-  <!-- Tailwind CDN (fast prototype) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              300: '#7dd3fc',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
-            },
-            deep: '#07305A',
-          }
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JB Formation — Achat en Chine & Monétisation TikTok">
+    <meta name="twitter:description" content="Double formation : Achat en Chine (Alibaba) + Création & Monétisation TikTok. Réserve ta place !">
+    <meta name="twitter:image" content="assets/preview.jpg">
+    <title>JB Formation — Achat en Chine & Monétisation TikTok</title>
+    <meta name="description" content="Double formation : Achat en Chine (Alibaba) + Création & Monétisation TikTok. Réserve ta place !" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        // Customizing Tailwind's default theme
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#003366',
+                        'primary-teal': '#00796B',
+                        'bg-light-blue': '#F0F8FF',
+                        'text-dark': '#212529',
+                        'neutral-100': '#E9ECEF',
+                        'neutral-200': '#DEE2E6',
+                        'neutral-500': '#ADB5BD',
+                        'neutral-600': '#6C757D',
+                        'whatsapp': '#25D366'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <!-- Lottie player -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <style>
-    :root{
-      --blue-1:#00A3FF;
-      --blue-2:#61D3FF;
-      --deep:#07305A;
-      --glass: rgba(255,255,255,0.06);
-    }
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --primary-teal: #00796B;
+        }
 
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
+        body {
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: var(--text-dark);
+            background-color: var(--bg-light-blue);
+        }
 
-    /* CTA shimmer */
-    .cta-shimmer{
-      background: linear-gradient(90deg,var(--blue-1),var(--blue-2),var(--blue-1));
-      background-size: 200% 100%;
-      color: white;
-      border-radius: 12px;
-      padding: .8rem 1.2rem;
-      display:inline-block;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 163, 255, 0.3);
-    }
-    .cta-shimmer:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 163, 255, 0.4);
-    }
-    .cta-shimmer.animate{animation: shimmer 2.2s linear infinite}
-    @keyframes shimmer{100%{background-position:-200% 0}}
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
 
-    /* glass card */
-    .glass{
-      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); 
-      border: 1px solid rgba(255,255,255,0.1); 
-      backdrop-filter: blur(12px);
-      border-radius: 16px;
-      transition: all 0.3s ease;
-    }
-    .glass:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
+        /* CTA button shimmer effect (more subtle) */
+        .cta-shimmer {
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-teal), var(--primary-blue));
+            background-size: 200% 100%;
+            color: white;
+            border-radius: 0.5rem; /* 8px */
+            padding: 0.8rem 1.2rem;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+        }
 
-    /* hero image tilt */
-    .hero-portrait{transform-origin:center; transition: transform .15s ease-out}
+        .cta-shimmer:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3);
+        }
 
-    /* reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      .cta-shimmer.animate,
-      .glass,
-      .hero-portrait {
-        animation: none;
-        transition: none;
-      }
-    }
+        .cta-shimmer.animate {
+            animation: shimmer 2.2s linear infinite;
+        }
 
-    /* simple scrollbar styling */
-    ::-webkit-scrollbar{height:10px;width:10px}
-    ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--blue-1),var(--blue-2)); border-radius:8px}
+        @keyframes shimmer {
+            100% {
+                background-position: -200% 0;
+            }
+        }
 
-    /* Custom animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .cta-shimmer.animate,
+            .whatsapp-float {
+                animation: none;
+                transition: none;
+            }
+        }
 
-    /* Section spacing */
-    section {
-      padding: 5rem 0;
-    }
+        /* Custom fade-in animation for elements on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
 
-    /* Gradient text */
-    .gradient-text {
-      background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    /* Navigation styling */
-    header {
-      transition: all 0.3s ease;
-    }
-    header.scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    }
-    .nav-link {
-      position: relative;
-      padding: 0.5rem 0;
-      font-weight: 500;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(to right, var(--blue-1), var(--blue-2));
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover::after {
-      width: 100%;
-    }
+        /* Gradient text effect for headings */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    /* Testimonial carousel */
-    .testimonial-carousel {
-      display: flex;
-      overflow-x: hidden;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-    .testimonial-slide {
-      scroll-snap-align: start;
-      flex-shrink: 0;
-      width: 100%;
-    }
+        /* Navigation bar styling on scroll */
+        header {
+            transition: all 0.3s ease;
+        }
 
-    /* FAQ accordion */
-    .faq-panel {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-    .faq-panel.open {
-      max-height: 200px;
-    }
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
 
-    /* Loading animation */
-    .loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-    .loading-screen.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-    .loader {
-      width: 50px;
-      height: 50px;
-      border: 3px solid rgba(0, 163, 255, 0.2);
-      border-radius: 50%;
-      border-top-color: var(--blue-1);
-      animation: spin 1s ease-in-out infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
+        /* Mobile menu animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        .menu-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hamburger animation */
+        .hamburger {
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger.open {
+            transform: rotate(90deg);
+        }
+
+        /* Testimonial carousel styling */
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .testimonial-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-slide {
+            scroll-snap-align: start;
+            flex: 0 0 85%;
+            margin-right: 1.5rem;
+        }
+
+        /* FAQ accordion styling */
+        .faq-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-panel.open {
+            max-height: 500px;
+        }
+
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-arrow.rotated {
+            transform: rotate(180deg);
+        }
+
+        /* Loading animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(0, 51, 102, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--primary-blue);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Floating WhatsApp button styling */
+        .whatsapp-float {
+            background: var(--whatsapp);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Modal animation */
+        .modal-container {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-container.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-content.active {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Prevent horizontal scroll issues */
+        body,
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Styling for input focus states */
+        input:focus,
+        select:focus {
+            outline: none;
+        }
+    </style>
 </head>
-<body class="bg-white text-slate-800 leading-relaxed">
+<body class="bg-bg-light-blue text-text-dark leading-relaxed">
 
-  <!-- Loading screen -->
-  <div class="loading-screen">
-    <div class="loader"></div>
-  </div>
-
-  <!-- HEADER -->
-  <header class="fixed w-full z-40 top-0 left-0 backdrop-blur-md bg-white/80 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <!-- SVG logo placeholder -->
-        <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <defs>
-            <linearGradient id="g" x1="0" x2="1">
-              <stop offset="0" stop-color="#00A3FF" />
-              <stop offset="1" stop-color="#61D3FF" />
-            </linearGradient>
-          </defs>
-          <rect width="48" height="48" rx="10" fill="url(#g)" />
-          <path d="M16 32 L32 24 L16 16 Z" fill="white" opacity="0.95" />
-        </svg>
-        <div>
-          <div class="text-lg font-bold">JB Formation</div>
-          <div class="text-xs text-slate-500">Formations en ligne</div>
-        </div>
-      </a>
-
-      <nav class="hidden md:flex gap-8 items-center text-sm">
-        <a href="#home" class="nav-link">Accueil</a>
-        <a href="#formations" class="nav-link">Formations</a>
-        <a href="#tarifs" class="nav-link">Tarifs & Dates</a>
-        <a href="#about" class="nav-link">À propos</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <button id="reserveTop" class="cta-shimmer animate ml-2">Réserve ta place</button>
-      </nav>
-
-      <!-- mobile hamburger -->
-      <div class="md:hidden">
-        <button id="btnMenu" aria-label="Ouvrir le menu" class="p-2 rounded-lg ring-1 ring-slate-200 hover:bg-slate-100 transition-colors">☰</button>
-      </div>
+    <div class="loading-screen">
+        <div class="loader"></div>
     </div>
-  </header>
 
-  <!-- Mobile menu (simple slide-in) -->
-  <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-black/40" id="menuOverlay"></div>
-    <aside class="absolute right-0 top-0 h-full w-72 bg-white shadow-lg p-6 transform transition-transform duration-300">
-      <button id="closeMenu" class="mb-6 p-1 rounded-full hover:bg-slate-100 transition-colors">✕</button>
-      <nav class="flex flex-col gap-4">
-        <a href="#home" class="font-medium py-2 border-b border-slate-100">Accueil</a>
-        <a href="#formations" class="font-medium py-2 border-b border-slate-100">Formations</a>
-        <a href="#tarifs" class="font-medium py-2 border-b border-slate-100">Tarifs</a>
-        <a href="#about" class="font-medium py-2 border-b border-slate-100">À propos</a>
-        <a href="#faq" class="font-medium py-2 border-b border-slate-100">FAQ</a>
-        <button id="reserveTopMobile" class="mt-4 cta-shimmer animate w-full">Réserver</button>
-      </nav>
-    </aside>
-  </div>
+    <header class="fixed w-full z-40 top-0 left-0 bg-white/90 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                    <defs>
+                        <linearGradient id="g" x1="0" x2="1">
+                            <stop offset="0" stop-color="var(--primary-blue)" />
+                            <stop offset="1" stop-color="var(--primary-teal)" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="48" height="48" rx="10" fill="url(#g)" />
+                    <path d="M16 32 L32 24 L16 16 Z" fill="white" opacity="0.95" />
+                </svg>
+                <div>
+                    <div class="text-md font-bold font-heading">JB Formation</div>
+                    <div class="text-xs text-neutral-500">Formations en ligne</div>
+                </div>
+            </a>
 
-  <main id="home" class="pt-28">
-
-    <!-- HERO -->
-    <section class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-[--blue-1] to-[--blue-2] text-white text-sm font-semibold shadow-md fade-in">Double formation</div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight fade-in">Apprends à importer depuis la Chine <span class="gradient-text">et</span> à monétiser TikTok</h1>
-        <p class="text-slate-600 max-w-xl text-lg fade-in">Rejoins notre pack exclusif : <strong>Achat en Chine (Alibaba)</strong> + <strong>Création & Monétisation TikTok</strong>. Places limitées — bonus : groupe WhatsApp d'accompagnement.</p>
-
-        <div class="flex gap-4 items-center fade-in">
-          <button id="heroReserve" class="cta-shimmer animate shadow-md text-lg px-6 py-3">Réserve ta place</button>
-          <a href="#formations" class="text-sm font-medium text-slate-700 hover:underline transition-colors">Voir les modules →</a>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-6 mt-6 items-start sm:items-center text-sm text-slate-600 fade-in">
-          <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[--blue-1]"></div><span>Lieu : Bafoussam</span></div>
-          <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[--blue-2]"></div><span>Bonus : Groupe WhatsApp offert</span></div>
-        </div>
-
-        <!-- seats countdown -->
-        <div class="mt-8 fade-in">
-          <div class="text-sm text-slate-600 mb-2">Places restantes: <span class="font-semibold">14/20</span></div>
-          <div class="w-full bg-slate-100 rounded-full overflow-hidden mt-2 h-3">
-            <div id="seatsBar" class="h-3 rounded-full bg-gradient-to-r from-[--blue-1] to-[--blue-2] transition-all duration-1000" style="width:70%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="relative flex items-center justify-center">
-        <!-- decorative blob -->
-        <div class="absolute -right-10 -top-10 w-72 h-72 opacity-20 bg-gradient-to-r from-[--blue-1] to-[--blue-2] rounded-full blur-xl"></div>
-
-        <!-- Lottie or portrait -->
-        <div class="w-80 h-80 rounded-2xl glass p-6 shadow-2xl flex items-center justify-center hero-portrait">
-          <lottie-player id="heroLottie" src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width:100%;height:100%" loop autoplay></lottie-player>
-        </div>
-      </div>
-    </section>
-
-    <!-- FORMATIONS -->
-    <section id="formations" class="max-w-6xl mx-auto px-6 py-12">
-      <h2 class="text-3xl font-bold mb-2 fade-in">Nos formations</h2>
-      <p class="text-slate-600 mb-10 max-w-xl fade-in">Deux formations complémentaires pour développer ton business en ligne</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Card 1 -->
-        <article class="p-8 rounded-2xl glass shadow-lg card transform transition-all duration-300 hover:scale-105" data-module="achat">
-          <div class="flex items-start justify-between mb-6">
-            <div>
-              <h3 class="text-xl font-semibold">Formation : Achat en Chine (Alibaba)</h3>
-              <p class="text-sm text-slate-600 mt-2">Trouver des fournisseurs fiables, commander et faire livrer au Cameroun, astuces anti-fraude.</p>
+            <div class="md:hidden">
+                <button id="btnMenu" aria-label="Ouvrir le menu" class="p-2 rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-100 transition-colors hamburger">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
-            <div class="text-right">
-              <div class="text-sm text-slate-500">Prix</div>
-              <div class="text-2xl font-bold gradient-text">50 000 XAF</div>
+
+            <nav class="hidden md:flex gap-6 items-center text-sm">
+                <a href="#home" class="hover:text-primary-blue transition-colors font-medium">Accueil</a>
+                <a href="#formations" class="hover:text-primary-blue transition-colors font-medium">Formations</a>
+                <a href="#about" class="hover:text-primary-blue transition-colors font-medium">À propos</a>
+                <a href="#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
+                <a href="#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
+                <button id="reserveTop" class="cta-shimmer animate ml-2 text-sm">Réserver</button>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobileMenu" class="fixed inset-0 z-50 menu-overlay">
+        <div class="absolute inset-0 bg-black/40" id="menuOverlay"></div>
+        <aside class="absolute right-0 top-0 h-full w-80 bg-white shadow-lg p-6 mobile-menu">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center gap-2">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="g-mobile" x1="0" x2="1">
+                                <stop offset="0" stop-color="var(--primary-blue)" />
+                                <stop offset="1" stop-color="var(--primary-teal)" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="48" height="48" rx="10" fill="url(#g-mobile)" />
+                        <path d="M16 32 L32 24 L16 16 Z" fill="white" opacity="0.95" />
+                    </svg>
+                    <div class="font-bold font-heading">JB Formation</div>
+                </div>
+                <button id="closeMenu" class="p-1 rounded-full hover:bg-neutral-100 transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
-          </div>
-
-          <ul class="mt-6 text-sm space-y-3 text-slate-700">
-            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Trouver fournisseurs fiables</li>
-            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Négociation & commande sur Alibaba</li>
-            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Livraison & douane au Cameroun</li>
-          </ul>
-
-          <div class="mt-8 flex gap-4">
-            <button class="reserveBtn px-5 py-3 rounded-lg cta-shimmer animate text-sm" data-module="Achat en Chine">Réserver</button>
-            <button class="outlineBtn px-5 py-3 rounded-lg ring-1 ring-slate-200 hover:bg-slate-50 transition-colors text-sm">Voir le contenu</button>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="p-8 rounded-2xl glass shadow-lg card transform transition-all duration-300 hover:scale-105" data-module="tiktok">
-          <div class="flex items-start justify-between mb-6">
-            <div>
-              <h3 class="text-xl font-semibold">Création & Monétisation TikTok</h3>
-              <p class="text-sm text-slate-600 mt-2">Créer un compte pro, contenu viral, activer la monétisation et convertir abonnés en revenus.</p>
-            </div>
-            <div class="text-right">
-              <div class="text-sm text-slate-500">Prix</div>
-              <div class="text-2xl font-bold gradient-text">35 000 XAF</div>
-            </div>
-          </div>
-
-          <ul class="mt-6 text-sm space-y-3 text-slate-700">
-            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Création de compte pro éligible</li>
-            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Stratégies contenu viral</li>
-            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Activation & astuces monétisation</li>
-          </ul>
-
-          <div class="mt-8 flex gap-4">
-            <button class="reserveBtn px-5 py-3 rounded-lg cta-shimmer animate text-sm" data-module="TikTok">Réserver</button>
-            <button class="outlineBtn px-5 py-3 rounded-lg ring-1 ring-slate-200 hover:bg-slate-50 transition-colors text-sm">Voir le contenu</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- About / animateur -->
-    <section id="about" class="bg-slate-50 py-16">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-center">
-        <div class="md:col-span-2">
-          <h3 class="text-3xl font-bold mb-6 fade-in">À propos de l'animateur</h3>
-          <p class="mt-3 text-slate-700 text-lg fade-in">Formateur expérimenté en import-export et growth sur les réseaux sociaux. Résultats prouvés avec dizaines d'élèves ayant lancé des boutiques et comptes monétisés.</p>
-
-          <ul class="mt-6 space-y-3 text-slate-700">
-            <li class="flex items-center gap-3 fade-in"><div class="w-2 h-2 rounded-full bg-[--blue-1]"></div>Support via groupe WhatsApp</li>
-            <li class="flex items-center gap-3 fade-in"><div class="w-2 h-2 rounded-full bg-[--blue-1]"></div>Bonus : modèle de message pour fournisseurs</li>
-            <li class="flex items-center gap-3 fade-in"><div class="w-2 h-2 rounded-full bg-[--blue-1]"></div>Pédagogie pratique et pas-à-pas</li>
-          </ul>
-        </div>
-        <div class="flex justify-center fade-in">
-          <div class="relative">
-            <div class="absolute -inset-4 bg-gradient-to-r from-[--blue-1] to-[--blue-2] rounded-2xl opacity-20 blur"></div>
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=60" alt="Formateur" class="relative rounded-2xl w-64 h-64 object-cover shadow-lg z-10" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="max-w-6xl mx-auto px-6 py-16">
-      <h3 class="text-3xl font-bold mb-2 fade-in">Ils témoignent</h3>
-      <p class="text-slate-600 mb-10 max-w-xl fade-in">Découvrez les retours de nos étudiants satisfaits</p>
-      
-      <div class="relative">
-        <div class="testimonial-carousel" id="testiCarousel">
-          <blockquote class="testimonial-slide p-8 rounded-2xl glass shadow-lg mr-6">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=60" alt="Lea" class="w-full h-full object-cover">
-              </div>
-              <div>
-                <div class="font-semibold">Lea, Bafoussam</div>
-                <div class="text-sm text-slate-500">Formation Achat en Chine</div>
-              </div>
-            </div>
-            <p class="italic text-slate-700">"Grâce à la formation, j'ai importé mes premiers produits et fait mes premières ventes ! Le processus était clair et le formateur très disponible pour répondre à mes questions."</p>
-          </blockquote>
-
-          <blockquote class="testimonial-slide p-8 rounded-2xl glass shadow-lg mr-6">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=60" alt="Paul" class="w-full h-full object-cover">
-              </div>
-              <div>
-                <div class="font-semibold">Paul, Douala</div>
-                <div class="text-sm text-slate-500">Formation TikTok</div>
-              </div>
-            </div>
-            <p class="italic text-slate-700">"Les techniques TikTok ont doublé mes abonnés en un mois. J'ai enfin réussi à activer la monétisation et je commence à générer des revenus réguliers."</p>
-          </blockquote>
-
-          <blockquote class="testimonial-slide p-8 rounded-2xl glass shadow-lg">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=60" alt="Sophie" class="w-full h-full object-cover">
-              </div>
-              <div>
-                <div class="font-semibold">Sophie, Yaoundé</div>
-                <div class="text-sm text-slate-500">Pack Double Formation</div>
-              </div>
-            </div>
-            <p class="italic text-slate-700">"Le pack complet était parfait pour moi. J'importe des produits de Chine et je les vends via TikTok. Une combinaison gagnante !"</p>
-          </blockquote>
-        </div>
-        
-        <div class="flex justify-center mt-8">
-          <button class="testimonial-prev p-2 rounded-full bg-slate-100 hover:bg-slate-200 mx-1 transition-colors">←</button>
-          <button class="testimonial-next p-2 rounded-full bg-slate-100 hover:bg-slate-200 mx-1 transition-colors">→</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="max-w-6xl mx-auto px-6 py-16">
-      <h3 class="text-3xl font-bold mb-2 fade-in">Questions fréquentes</h3>
-      <p class="text-slate-600 mb-10 max-w-xl fade-in">Trouvez des réponses aux questions les plus courantes</p>
-      
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl glass shadow-md">
-          <button class="faqBtn w-full text-left py-3 font-semibold flex justify-between items-center">
-            Comment payer ?
-            <svg class="faq-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-panel">
-            <div class="px-2 pb-3 text-slate-700">Paiement mobile money (MTN/Moov), ou virement. Détails lors de l'inscription.</div>
-          </div>
-        </div>
-        
-        <div class="p-6 rounded-xl glass shadow-md">
-          <button class="faqBtn w-full text-left py-3 font-semibold flex justify-between items-center">
-            Où a lieu la formation ?
-            <svg class="faq-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-panel">
-            <div class="px-2 pb-3 text-slate-700">La formation est en ligne — bonus et suivi via WhatsApp. Des sessions présentielles peuvent être annoncées à Bafoussam.</div>
-          </div>
-        </div>
-        
-        <div class="p-6 rounded-xl glass shadow-md">
-          <button class="faqBtn w-full text-left py-3 font-semibold flex justify-between items-center">
-            Puis-je suivre les deux formations ?
-            <svg class="faq-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-panel">
-            <div class="px-2 pb-3 text-slate-700">Absolument ! Nous proposons un pack spécial à prix réduit pour les deux formations. Contactez-nous pour plus de détails.</div>
-          </div>
-        </div>
-        
-        <div class="p-6 rounded-xl glass shadow-md">
-          <button class="faqBtn w-full text-left py-3 font-semibold flex justify-between items-center">
-            Y a-t-il un support après la formation ?
-            <svg class="faq-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-panel">
-            <div class="px-2 pb-3 text-slate-700">Oui, vous rejoindrez un groupe WhatsApp exclusif où vous pourrez poser vos questions et échanger avec d'autres participants.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / Enrollment modal trigger -->
-    <section id="tarifs" class="max-w-6xl mx-auto px-6 py-16 text-center bg-slate-50 rounded-2xl">
-      <h3 class="text-3xl font-bold mb-4 fade-in">Prêt à transformer ton business ?</h3>
-      <p class="text-slate-600 max-w-2xl mx-auto mb-8 fade-in">Rejoins nos prochaines sessions. Les places sont limitées — réserve maintenant pour garantir ta participation.</p>
-      <div class="flex gap-4 justify-center">
-        <button id="openEnroll" class="cta-shimmer animate px-6 py-3 rounded-md text-lg">S'inscrire maintenant</button>
-        <a href="https://wa.me/682252932" target="_blank" class="px-6 py-3 rounded-md ring-1 ring-slate-200 hover:bg-slate-100 transition-colors text-lg">Nous contacter</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t mt-10 py-10 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="flex items-center gap-3">
-        <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1">
-              <stop offset="0" stop-color="#00A3FF" />
-              <stop offset="1" stop-color="#61D3FF" />
-            </linearGradient>
-          </defs>
-          <rect width="48" height="48" rx="10" fill="url(#g)" />
-          <path d="M16 32 L32 24 L16 16 Z" fill="white" opacity="0.95" />
-        </svg>
-        <div>
-          <div class="text-lg font-bold">JB Formation</div>
-          <div class="text-xs text-slate-500">Formations en ligne professionnelles</div>
-        </div>
-      </div>
-      
-      <div class="text-sm text-slate-600 text-center md:text-right">© 2023 JB Formation — Tous droits réservés<br>
-        <a href="#faq" class="hover:underline">Politique de confidentialité</a> • 
-        <a href="#" class="hover:underline">Mentions légales</a>
-      </div>
+            <nav class="flex flex-col gap-2">
+                <a href="#home" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Accueil</a>
+                <a href="#formations" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Formations</a>
+                <a href="#about" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">À propos</a>
+                <a href="#testimonials" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Témoignages</a>
+                <a href="#faq" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">FAQ</a>
+                <button id="reserveTopMobile" class="mt-4 cta-shimmer animate w-full py-3">Réserver ma place</button>
+            </nav>
+        </aside>
     </div>
-  </footer>
 
-  <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/682252932" target="_blank" aria-label="Contact WhatsApp" class="fixed right-5 bottom-5 z-50 shadow-lg rounded-full p-4 bg-gradient-to-r from-[--blue-1] to-[--blue-2] text-white hover:scale-110 transition-transform">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-    </svg>
-  </a>
+    <main id="home" class="pt-24 md:pt-28">
 
-  <!-- ENROLL MODAL (hidden) -->
-  <div id="enrollModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-    <div class="bg-white rounded-2xl p-8 w-full max-w-md transform transition-all duration-300 scale-95 opacity-0">
-      <div class="flex justify-between items-center mb-6">
-        <h4 class="text-xl font-semibold">Réserver une place</h4>
-        <button id="closeEnroll" class="p-1 rounded-full hover:bg-slate-100 transition-colors">✕</button>
-      </div>
+        <section class="max-w-3xl mx-auto px-4 py-10 text-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-blue text-white text-xs font-semibold shadow-md fade-in">Double formation</div>
+                <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight font-heading fade-in">Apprends à importer depuis la Chine <span class="gradient-text">et</span> à monétiser TikTok</h1>
+                <p class="text-neutral-600 text-lg fade-in">Rejoins notre pack exclusif : <strong>Achat en Chine (Alibaba)</strong> + <strong>Création & Monétisation TikTok</strong>. Places limitées — bonus : groupe WhatsApp d'accompagnement.</p>
 
-      <form id="enrollForm" class="space-y-4">
-        <div>
-          <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nom complet</label>
-          <input name="name" id="name" required placeholder="Votre nom" class="w-full p-3 ring-1 ring-slate-200 rounded-lg focus:ring-2 focus:ring-[--blue-1] transition-all" />
-        </div>
-        
-        <div>
-          <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">Téléphone</label>
-          <input name="phone" id="phone" required placeholder="ex: 682252932" class="w-full p-3 ring-1 ring-slate-200 rounded-lg focus:ring-2 focus:ring-[--blue-1] transition-all" />
-        </div>
-        
-        <div>
-          <label for="module" class="block text-sm font-medium text-slate-700 mb-1">Formation choisie</label>
-          <select name="module" id="module" class="w-full p-3 ring-1 ring-slate-200 rounded-lg focus:ring-2 focus:ring-[--blue-1] transition-all bg-white">
-            <option value="Achat en Chine">Achat en Chine (Alibaba) - 50 000 XAF</option>
-            <option value="TikTok">Création & Monétisation TikTok - 35 000 XAF</option>
-            <option value="Double">Pack Double Formation - 75 000 XAF</option>
-          </select>
-        </div>
-        
-        <div class="flex items-start gap-3">
-          <input type="checkbox" id="terms" required class="mt-1" /> 
-          <label for="terms" class="text-sm text-slate-700">J'accepte d'être contacté via WhatsApp pour finaliser mon inscription et recevoir les informations importantes concernant la formation.</label>
-        </div>
-        
-        <div class="flex justify-end pt-4">
-          <button type="submit" class="cta-shimmer animate px-5 py-3 rounded-lg font-semibold">Confirmer la réservation</button>
-        </div>
-      </form>
+                <div class="flex flex-col sm:flex-row gap-3 items-center justify-center fade-in">
+                    <button id="heroReserve" class="cta-shimmer animate shadow-md text-base px-6 py-3 w-full sm:w-auto">Réserve ta place</button>
+                    <a href="#formations" class="text-sm font-semibold text-neutral-600 hover:text-primary-blue transition-colors text-center w-full sm:w-auto">Découvrir les modules →</a>
+                </div>
+            </div>
+        </section>
 
-      <div id="enrollSuccess" class="hidden mt-6 p-4 rounded-lg bg-green-50 text-green-800 border border-green-200">
-        <div class="flex items-center gap-3">
-          <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-          </svg>
-          <span>Merci ! Nous vous enverrons un message WhatsApp dans les plus brefs délais pour finaliser votre inscription.</span>
+        <section class="bg-white py-12">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 w-full flex justify-center fade-in md:order-last">
+                    <div class="w-full max-w-sm md:max-w-md">
+                        <lottie-player id="heroLottie" src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width:100%;height:100%" loop autoplay></lottie-player>
+                    </div>
+                </div>
+                <div class="flex-1 w-full space-y-6 fade-in md:order-first">
+                    <h2 class="text-2xl font-bold font-heading">Une formation pratique pour des résultats concrets</h2>
+                    <p class="text-neutral-600">Nos formations sont conçues pour te donner les clés de la réussite. Pas de théorie complexe, uniquement des étapes claires et applicables pour lancer et développer ton business.</p>
+                    <ul class="space-y-4 text-neutral-700">
+                        <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Accès à vie aux modules de formation</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-4a2 2 0 01-2-2V8a2 2 0 012-2h4a2 2 0 012 2v10a2 2 0 01-2 2z"></path></svg><span>Bonus exclusifs : modèles de négociation et listes de grossistes</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-6 h-6 text-primary-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg><span>Support continu via un groupe WhatsApp privé</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="formations" class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold mb-2 text-center font-heading fade-in">Nos formations</h2>
+            <p class="text-neutral-600 mb-10 text-center fade-in">Deux formations complémentaires pour développer ton business en ligne</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <article class="p-8 rounded-2xl bg-white shadow-lg border-t-8 border-primary-blue card fade-in" data-module="achat">
+                    <div class="flex items-start justify-between mb-5">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading">Achat en Chine (Alibaba)</h3>
+                            <p class="text-sm text-neutral-600 mt-1">Trouver des fournisseurs fiables, commander et faire livrer au Cameroun, astuces anti-fraude.</p>
+                        </div>
+                        <div class="text-right pl-4">
+                            <div class="text-sm text-neutral-500">Prix</div>
+                            <div class="text-2xl font-bold text-primary-blue font-heading">50 000 XAF</div>
+                        </div>
+                    </div>
+
+                    <ul class="mt-6 text-base space-y-2 text-neutral-700">
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-primary-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Trouver fournisseurs fiables</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-primary-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Négociation & commande sur Alibaba</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-primary-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Livraison & douane au Cameroun</li>
+                    </ul>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        <button class="reserveBtn px-5 py-3 rounded-lg cta-shimmer animate text-sm" data-module="Achat en Chine">Réserver</button>
+                        <a href="pages/module-achat.html" class="px-5 py-3 rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-100 transition-colors text-sm font-semibold text-primary-blue">Voir le contenu</a>
+                    </div>
+                </article>
+
+                <article class="p-8 rounded-2xl bg-white shadow-lg border-t-8 border-primary-teal card fade-in" data-module="tiktok">
+                    <div class="flex items-start justify-between mb-5">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading">Création & Monétisation TikTok</h3>
+                            <p class="text-sm text-neutral-600 mt-1">Créer un compte pro, contenu viral, activer la monétisation et convertir abonnés en revenus.</p>
+                        </div>
+                        <div class="text-right pl-4">
+                            <div class="text-sm text-neutral-500">Prix</div>
+                            <div class="text-2xl font-bold text-primary-blue font-heading">35 000 XAF</div>
+                        </div>
+                    </div>
+
+                    <ul class="mt-6 text-base space-y-2 text-neutral-700">
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-primary-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Création de compte pro éligible</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-primary-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Stratégies contenu viral</li>
+                        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-primary-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Activation & astuces monétisation</li>
+                    </ul>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        <button class="reserveBtn px-5 py-3 rounded-lg cta-shimmer animate text-sm" data-module="TikTok">Réserver</button>
+                        <a href="pages/module-tiktok.html" class="px-5 py-3 rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-100 transition-colors text-sm font-semibold text-primary-blue">Voir le contenu</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <h3 class="text-3xl font-bold mb-10 text-center font-heading fade-in">À propos de l'animateur</h3>
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex justify-center md:justify-start fade-in">
+                        <div class="w-40 h-40 md:w-48 md:h-48 rounded-full bg-primary-blue flex items-center justify-center text-white text-5xl font-bold font-heading shadow-xl">
+                            JB
+                        </div>
+                    </div>
+                    <div class="md:flex-1">
+                        <p class="text-neutral-700 text-lg mb-6 fade-in">Jean-Baptiste est un formateur expérimenté spécialisé dans l'import-export et le growth sur les réseaux sociaux. Avec plus de 5 ans d'expérience dans le domaine, il a aidé des dizaines d'élèves à lancer des boutiques en ligne rentables et à développer une présence impactante sur TikTok.</p>
+                        <ul class="space-y-4 text-neutral-700">
+                            <li class="flex items-start gap-3 fade-in"><svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Expert en sourcing de produits sur Alibaba et Aliexpress</li>
+                            <li class="flex items-start gap-3 fade-in"><svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Spécialiste en croissance TikTok avec des comptes à plus de 100k abonnés</li>
+                            <li class="flex items-start gap-3 fade-in"><svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Accompagnement personnalisé via groupe WhatsApp privé</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="max-w-7xl mx-auto px-4 py-16">
+            <h3 class="text-3xl font-bold mb-2 text-center font-heading fade-in">Ils témoignent</h3>
+            <p class="text-neutral-600 mb-10 text-center fade-in">Découvrez les retours de nos étudiants satisfaits</p>
+            <div class="testimonial-carousel" id="testiCarousel">
+                <blockquote class="testimonial-slide p-8 rounded-2xl bg-white shadow-lg border-l-4 border-primary-teal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=60" alt="Léa" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold">Léa, Bafoussam</div>
+                            <div class="text-sm text-neutral-500">Formation Achat en Chine</div>
+                        </div>
+                    </div>
+                    <p class="italic text-neutral-700">"Grâce à la formation, j'ai importé mes premiers produits et fait mes premières ventes ! Le processus était clair et le formateur très disponible pour répondre à mes questions."</p>
+                </blockquote>
+
+                <blockquote class="testimonial-slide p-8 rounded-2xl bg-white shadow-lg border-l-4 border-primary-teal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=60" alt="Paul" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold">Paul, Douala</div>
+                            <div class="text-sm text-neutral-500">Formation TikTok</div>
+                        </div>
+                    </div>
+                    <p class="italic text-neutral-700">"Les techniques TikTok ont doublé mes abonnés en un mois. J'ai enfin réussi à activer la monétisation et je commence à générer des revenus réguliers."</p>
+                </blockquote>
+
+                <blockquote class="testimonial-slide p-8 rounded-2xl bg-white shadow-lg border-l-4 border-primary-teal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=60" alt="Sophie" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold">Sophie, Yaoundé</div>
+                            <div class="text-sm text-neutral-500">Pack Double Formation</div>
+                        </div>
+                    </div>
+                    <p class="italic text-neutral-700">"Le pack complet était parfait pour moi. J'importe des produits de Chine et je les vends via TikTok. Une combinaison gagnante !"</p>
+                </blockquote>
+            </div>
+            
+            <div class="flex justify-center mt-6">
+                <div class="flex gap-2">
+                    <div class="w-2.5 h-2.5 rounded-full bg-primary-blue testimonial-dot active" data-index="0"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-neutral-400 testimonial-dot" data-index="1"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-neutral-400 testimonial-dot" data-index="2"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="max-w-7xl mx-auto px-4 py-16">
+            <h3 class="text-3xl font-bold mb-2 text-center font-heading fade-in">Questions fréquentes</h3>
+            <p class="text-neutral-600 mb-10 text-center fade-in">Trouvez des réponses aux questions les plus courantes</p>
+            <div class="space-y-4">
+                <div class="p-5 rounded-2xl bg-white shadow-md border border-neutral-200">
+                    <button class="faqBtn w-full text-left py-2 font-semibold flex justify-between items-center">
+                        <span>Comment payer ?</span>
+                        <svg class="faq-arrow w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="pt-2 text-neutral-700">Paiement mobile money (MTN/Moov), ou virement. Détails lors de l'inscription.</div>
+                    </div>
+                </div>
+                
+                <div class="p-5 rounded-2xl bg-white shadow-md border border-neutral-200">
+                    <button class="faqBtn w-full text-left py-2 font-semibold flex justify-between items-center">
+                        <span>Où a lieu la formation ?</span>
+                        <svg class="faq-arrow w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="pt-2 text-neutral-700">La formation est en ligne — bonus et suivi via WhatsApp. Des sessions présentielles peuvent être annoncées à Bafoussam.</div>
+                    </div>
+                </div>
+                
+                <div class="p-5 rounded-2xl bg-white shadow-md border border-neutral-200">
+                    <button class="faqBtn w-full text-left py-2 font-semibold flex justify-between items-center">
+                        <span>Puis-je suivre les deux formations ?</span>
+                        <svg class="faq-arrow w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="pt-2 text-neutral-700">Absolument ! Nous proposons un pack spécial à prix réduit pour les deux formations. Contactez-nous pour plus de détails.</div>
+                    </div>
+                </div>
+                
+                <div class="p-5 rounded-2xl bg-white shadow-md border border-neutral-200">
+                    <button class="faqBtn w-full text-left py-2 font-semibold flex justify-between items-center">
+                        <span>Y a-t-il un support après la formation ?</span>
+                        <svg class="faq-arrow w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-panel">
+                        <div class="pt-2 text-neutral-700">Oui, vous rejoindrez un groupe WhatsApp exclusif où vous pourrez poser vos questions et échanger avec d'autres participants.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tarifs" class="max-w-7xl mx-auto px-4 py-16 text-center bg-white rounded-2xl border border-neutral-200 shadow-md">
+            <h3 class="text-3xl font-bold mb-4 font-heading fade-in">Prêt à transformer ton business ?</h3>
+            <p class="text-neutral-600 max-w-xl mx-auto mb-8 fade-in">Rejoins nos prochaines sessions. Les places sont limitées — réserve maintenant pour garantir ta participation.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="openEnroll" class="cta-shimmer animate px-6 py-3 rounded-md">S'inscrire maintenant</button>
+                <a href="https://wa.me/682252932" target="_blank" class="px-6 py-3 rounded-md ring-1 ring-neutral-200 hover:bg-neutral-100 transition-colors font-semibold text-primary-blue">Nous contacter</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 py-12 bg-primary-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="10" fill="white" />
+                        <path d="M16 32 L32 24 L16 16 Z" fill="var(--primary-blue)" opacity="0.95" />
+                    </svg>
+                    <div>
+                        <div class="text-md font-bold font-heading">JB Formation</div>
+                        <div class="text-xs text-neutral-300">Formations en ligne professionnelles</div>
+                    </div>
+                </div>
+                <p class="text-sm text-neutral-300">Spécialistes en importation et stratégie digitale, nous vous guidons vers l'indépendance financière.</p>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-lg font-bold font-heading">Liens utiles</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#formations" class="text-neutral-300 hover:text-white transition-colors">Nos formations</a></li>
+                    <li><a href="#about" class="text-neutral-300 hover:text-white transition-colors">À propos de nous</a></li>
+                    <li><a href="#faq" class="text-neutral-300 hover:text-white transition-colors">FAQ</a></li>
+                    <li><a href="#" class="text-neutral-300 hover:text-white transition-colors">Mentions légales</a></li>
+                    <li><a href="#" class="text-neutral-300 hover:text-white transition-colors">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-lg font-bold font-heading">Nous contacter</h4>
+                <ul class="space-y-2 text-sm">
+                    <!-- <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg> contact@jbformation.com</li> -->
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M22.02 12c0 5.518-4.482 10-10 10S2.02 17.518 2.02 12c0-5.517 4.482-10 10-10s10 4.483 10 10zM12 2a10 10 0 100 20 10 10 0 000-20zM12 6a1 1 0 00-1 1v4h-4a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V7a1 1 0 00-1-1z"></path></svg> +237 682 252 932</li>
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.257 2.76 7.91 6.84 9.135L12 22l3.16-1.135C19.24 19.91 22 16.257 22 12c0-5.523-4.477-10-10-10zm0 14c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"></path></svg> Bafoussam, Cameroun</li>
+                </ul>
+            </div>
         </div>
-      </div>
+        <div class="border-t border-neutral-700 mt-12 pt-8 text-center text-xs text-neutral-400">
+            &copy; 2025 JB Formation. Tous droits réservés.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/682252932" target="_blank" aria-label="Contact WhatsApp" class="fixed right-4 bottom-4 z-50 whatsapp-float rounded-full p-4">
+        <i class="fab fa-whatsapp" style="color: green; transform: scale(2)"></i>
+    </a>
+
+    <div id="enrollModal" class="fixed inset-0 z-50 modal-container">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="modalOverlay"></div>
+        <div class="absolute inse t-0 flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl p-8 w-full max-w-md modal-content shadow-2xl">
+                <div class="flex justify-between items-center mb-6">
+                    <h4 class="text-2xl font-bold font-heading">Réserver une place</h4>
+                    <button id="closeEnroll" class="p-1 rounded-full hover:bg-neutral-100 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <form id="enrollForm" class="space-y-5">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-neutral-700 mb-1">Nom complet</label>
+                        <input name="name" id="name" required placeholder="Votre nom" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all" />
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-neutral-700 mb-1">Téléphone</label>
+                        <input name="phone" id="phone" required placeholder="ex: 682252932" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all" />
+                    </div>
+                    
+                    <div>
+                        <label for="module" class="block text-sm font-medium text-neutral-700 mb-1">Formation choisie</label>
+                        <select name="module" id="module" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all bg-white">
+                            <option value="Achat en Chine">Achat en Chine (Alibaba) - 50 000 XAF</option>
+                            <option value="TikTok">Création & Monétisation TikTok - 35 000 XAF</option>
+                            <option value="Double">Pack Double Formation - 75 000 XAF</option>
+                        </select>
+                    </div>
+                    
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" id="terms" required class="mt-1 accent-primary-blue" />
+                        <label for="terms" class="text-sm text-neutral-600">J'accepte les <a href="#" class="text-primary-blue hover:underline">mentions légales</a> et la politique de confidentialité.</label>
+                    </div>
+                    
+                    <button type="submit" class="w-full cta-shimmer animate px-6 py-3 text-lg font-semibold mt-4">Confirmer ma réservation</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
+    
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-  <script>
-    // Wait for DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-      // Hide loading screen after everything is loaded
-      setTimeout(() => {
-        document.querySelector('.loading-screen').classList.add('hidden');
-      }, 1000);
+        // GSAP ScrollTrigger for fade-in animations
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.fade-in').forEach(el => {
+            gsap.fromTo(el, {
+                opacity: 0,
+                y: 20
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
 
-      // Initialize GSAP and ScrollTrigger
-      gsap.registerPlugin(ScrollTrigger);
-      const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
 
-      // Header scroll effect
-      window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
+        // Mobile menu functionality
+        const btnMenu = document.getElementById('btnMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const hamburgerIcon = btnMenu.querySelector('svg');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+            mobileMenu.querySelector('aside').classList.toggle('open');
+            btnMenu.classList.toggle('open');
+            hamburgerIcon.innerHTML = mobileMenu.classList.contains('active') ?
+                `<path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` :
+                `<path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
         }
-      });
+        btnMenu.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
 
-      // Animate elements on scroll
-      if (!prefersReduce) {
-        // Animate header on load
-        gsap.from('header', {y: -20, opacity: 0, duration: 0.6});
-        
-        // Hero animations
-        gsap.from('.hero-portrait', {
-          y: 30,
-          opacity: 0,
-          duration: 1,
-          ease: 'power3.out',
-          delay: 0.2
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
         });
-        
-        // Animate all fade-in elements on scroll
-        const fadeEls = document.querySelectorAll('.fade-in');
-        fadeEls.forEach(el => {
-          gsap.to(el, {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          });
+
+        // Testimonial carousel functionality
+        const testiCarousel = document.getElementById('testiCarousel');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+
+        testiCarousel.addEventListener('scroll', () => {
+            const activeIndex = Math.round(testiCarousel.scrollLeft / testiCarousel.offsetWidth);
+            testimonialDots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active', 'bg-primary-blue');
+                    dot.classList.remove('bg-neutral-400');
+                } else {
+                    dot.classList.remove('active', 'bg-primary-blue');
+                    dot.classList.add('bg-neutral-400');
+                }
+            });
         });
-        
-        // Card animations
-        gsap.from('.card', {
-          y: 40,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          scrollTrigger: {
-            trigger: '.card',
-            start: 'top 85%'
-          }
+
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = dot.dataset.index;
+                testiCarousel.scrollTo({
+                    left: testiCarousel.offsetWidth * index,
+                    behavior: 'smooth'
+                });
+            });
         });
-      }
 
-      // Hero parallax on mouse move (subtle)
-      const heroWrap = document.querySelector('.relative');
-      heroWrap?.addEventListener('mousemove', (e) => {
-        if (prefersReduce) return;
-        
-        const rect = heroWrap.getBoundingClientRect();
-        const px = (e.clientX - rect.left) / rect.width - 0.5;
-        const py = (e.clientY - rect.top) / rect.height - 0.5;
-        const el = document.querySelector('.hero-portrait');
-        if (el) el.style.transform = `translate(${px * 10}px, ${py * 6}px) rotate(${px * 2}deg)`;
-      });
-
-      // Mobile menu logic
-      const btnMenu = document.getElementById('btnMenu');
-      const mobileMenu = document.getElementById('mobileMenu');
-      const closeMenu = document.getElementById('closeMenu');
-      const menuOverlay = document.getElementById('menuOverlay');
-      
-      btnMenu?.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-        setTimeout(() => {
-          mobileMenu.querySelector('aside').classList.remove('translate-x-full');
-        }, 10);
-      });
-      
-      function closeMobileMenu() {
-        mobileMenu.querySelector('aside').classList.add('translate-x-full');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-        }, 300);
-      }
-      
-      closeMenu?.addEventListener('click', closeMobileMenu);
-      menuOverlay?.addEventListener('click', closeMobileMenu);
-
-      // Modal functionality
-      const enrollModal = document.getElementById('enrollModal');
-      const modalContent = enrollModal.querySelector('.bg-white');
-      const openEnroll = document.getElementById('openEnroll');
-      const closeEnroll = document.getElementById('closeEnroll');
-      const reserveBtns = document.querySelectorAll('.reserveBtn');
-      
-      function openModal() {
-        enrollModal.classList.remove('hidden');
-        setTimeout(() => {
-          modalContent.classList.remove('scale-95', 'opacity-0');
-        }, 10);
-      }
-      
-      function closeModal() {
-        modalContent.classList.add('scale-95', 'opacity-0');
-        setTimeout(() => {
-          enrollModal.classList.add('hidden');
-        }, 300);
-      }
-      
-      openEnroll?.addEventListener('click', openModal);
-      closeEnroll?.addEventListener('click', closeModal);
-      reserveBtns.forEach(b => b.addEventListener('click', (e) => {
-        const m = e.currentTarget.getAttribute('data-module');
-        const sel = document.querySelector('select[name=module]');
-        if (sel) sel.value = m || 'Double';
-        openModal();
-      }));
-      
-      // Top reserve buttons
-      document.getElementById('heroReserve')?.addEventListener('click', openModal);
-      document.getElementById('reserveTop')?.addEventListener('click', openModal);
-      document.getElementById('reserveTopMobile')?.addEventListener('click', () => {
-        openModal();
-        closeMobileMenu();
-      });
-
-      // Form submission
-      const enrollForm = document.getElementById('enrollForm');
-      const enrollSuccess = document.getElementById('enrollSuccess');
-      
-      enrollForm?.addEventListener('submit', (ev) => {
-        ev.preventDefault();
-        enrollForm.classList.add('hidden');
-        enrollSuccess.classList.remove('hidden');
-        
-        // Simulate seats decrease
-        const bar = document.getElementById('seatsBar');
-        const cur = parseFloat(bar.style.width) || 70;
-        bar.style.width = Math.max(8, cur - 12) + '%';
-        
-        setTimeout(() => {
-          closeModal();
-          setTimeout(() => {
-            enrollForm.classList.remove('hidden');
-            enrollSuccess.classList.add('hidden');
-            enrollForm.reset();
-          }, 300);
-        }, 2500);
-      });
-
-      // FAQ toggles
-      document.querySelectorAll('.faqBtn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const panel = btn.nextElementSibling;
-          const arrow = btn.querySelector('.faq-arrow');
-          
-          if (!panel) return;
-          
-          const isOpen = panel.classList.contains('open');
-          
-          // Close all other FAQs
-          document.querySelectorAll('.faq-panel').forEach(p => {
-            if (p !== panel) {
-              p.classList.remove('open');
-              p.previousElementSibling.querySelector('.faq-arrow').classList.remove('rotate-180');
-            }
-          });
-          
-          // Toggle current FAQ
-          if (isOpen) {
-            panel.classList.remove('open');
-            arrow.classList.remove('rotate-180');
-          } else {
-            panel.classList.add('open');
-            arrow.classList.add('rotate-180');
-          }
+        // FAQ accordion
+        document.querySelectorAll('.faqBtn').forEach(button => {
+            button.addEventListener('click', () => {
+                const panel = button.nextElementSibling;
+                const arrow = button.querySelector('.faq-arrow');
+                panel.classList.toggle('open');
+                arrow.classList.toggle('rotated');
+            });
         });
-      });
 
-      // Testimonial carousel
-      const carousel = document.getElementById('testiCarousel');
-      const prevBtn = document.querySelector('.testimonial-prev');
-      const nextBtn = document.querySelector('.testimonial-next');
-      const slides = document.querySelectorAll('.testimonial-slide');
-      let currentSlide = 0;
-      
-      function updateCarousel() {
-        if (prefersReduce) return;
-        
-        gsap.to(carousel, {
-          x: -currentSlide * (slides[0].offsetWidth + 24),
-          duration: 0.5,
-          ease: 'power2.out'
+        // Enrollment modal functionality
+        const enrollModal = document.getElementById('enrollModal');
+        const openEnrollBtns = document.querySelectorAll('#reserveTop, #reserveTopMobile, #heroReserve, .reserveBtn, #openEnroll');
+        const closeEnrollBtn = document.getElementById('closeEnroll');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const enrollForm = document.getElementById('enrollForm');
+        const moduleSelect = document.getElementById('module');
+        const modalContent = enrollModal.querySelector('.modal-content');
+
+        openEnrollBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const module = btn.dataset.module;
+                if (module) {
+                    moduleSelect.value = module;
+                }
+                enrollModal.classList.add('active');
+                modalContent.classList.add('active');
+            });
         });
-      }
-      
-      nextBtn?.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateCarousel();
-      });
-      
-      prevBtn?.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateCarousel();
-      });
-      
-      // Auto-advance carousel
-      if (!prefersReduce) {
-        setInterval(() => {
-          currentSlide = (currentSlide + 1) % slides.length;
-          updateCarousel();
-        }, 6000);
-      }
-      
-      // Initialize
-      updateCarousel();
-    });
-  </script>
+
+        closeEnrollBtn.addEventListener('click', () => {
+            enrollModal.classList.remove('active');
+            modalContent.classList.remove('active');
+        });
+
+        modalOverlay.addEventListener('click', () => {
+            enrollModal.classList.remove('active');
+            modalContent.classList.remove('active');
+        });
+
+        // Form submission
+        enrollForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const module = document.getElementById('module').value;
+
+            const message = `Bonjour JB, je suis intéressé(e) par la formation *"${module}"* et je souhaite réserver ma place. \n\n*Nom*: ${name}\n*Téléphone*: ${phone}\n\nMerci.`;
+            const whatsappUrl = `https://wa.me/682252932?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Remove loading screen when the page is fully loaded
+        window.addEventListener('load', () => {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.classList.add('hidden');
+        });
+    </script>
 </body>
 </html>
