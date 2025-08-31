@@ -35,11 +35,18 @@
                         'neutral-200': '#DEE2E6',
                         'neutral-500': '#ADB5BD',
                         'neutral-600': '#6C757D',
-                        'whatsapp': '#25D366'
+                        'whatsapp': '#25D366',
+                        'accent-orange': '#FF6B35',
+                        'accent-purple': '#6A4C93'
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
                         heading: ['Montserrat', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'medium': '0 6px 25px rgba(0, 0, 0, 0.07)',
+                        'strong': '0 10px 40px rgba(0, 0, 0, 0.1)'
                     }
                 }
             }
@@ -53,6 +60,9 @@
         :root {
             --primary-blue: #003366;
             --primary-teal: #00796B;
+            --accent-orange: #FF6B35;
+            --accent-purple: #6A4C93;
+            --bg-light-blue: #F0F8FF;
         }
 
         body {
@@ -110,7 +120,7 @@
             background-clip: text;
         }
 
-         /* Mobile menu animation */
+        /* Mobile menu animation */
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -140,8 +150,7 @@
             transform: rotate(90deg);
         }
 
-
-         /* Modal animation */
+        /* Modal animation */
         .modal-container {
             opacity: 0;
             visibility: hidden;
@@ -162,14 +171,139 @@
             transform: scale(1) translateY(0);
         }
 
+        /* Floating WhatsApp button styling */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-tooltip {
+            visibility: hidden;
+            width: 180px;
+            background-color: #075E54;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Styling for input focus states */
+        input:focus,
+        select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.2);
+        }
+
+        /* New UI Elements */
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-pattern {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23003366' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .section-pattern > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header scroll effect */
+        header {
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
     </style>
 </head>
 <body class="bg-bg-light-blue text-text-dark leading-relaxed">
 
    <header class="fixed w-full z-40 top-0 left-0 bg-white/90 backdrop-blur-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto bg-primary-blue  px-4 py-3 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2">
-                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <img src="../assets/logo-bg.png" style="width: 185px; height: 60px;" alt="">
+                <!-- <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                     <defs>
                         <linearGradient id="g" x1="0" x2="1">
                             <stop offset="0" stop-color="var(--primary-blue)" />
@@ -182,11 +316,11 @@
                 <div>
                     <div class="text-md font-bold font-heading">JB Formation</div>
                     <div class="text-xs text-neutral-500">Formations en ligne</div>
-                </div>
+                </div> -->
             </a>
 
             <div class="md:hidden">
-                <button id="btnMenu" aria-label="Ouvrir le menu" class="p-2 rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-100 transition-colors hamburger">
+                <button id="btnMenu" aria-label="Ouvrir le menu" class="p-2 text-white rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-100 transition-colors hamburger">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -195,23 +329,25 @@
                 </button>
             </div>
 
-            <nav class="hidden md:flex gap-6 items-center text-sm">
-                <a href="#home" class="hover:text-primary-blue transition-colors font-medium">Accueil</a>
-                <a href="#formations" class="hover:text-primary-blue transition-colors font-medium">Formations</a>
-                <a href="#about" class="hover:text-primary-blue transition-colors font-medium">À propos</a>
-                <a href="#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
-                <a href="#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
+            <nav class="hidden md:flex gap-6 items-center text-white text-sm">
+                <a href="../index.html" class="hover:text-primary-blue transition-colors font-medium">Accueil</a>
+                <a href="../index.html#formations" class="hover:text-primary-blue transition-colors font-medium">Formations</a>
+                <a href="../index.html#about" class="hover:text-primary-blue transition-colors font-medium">À propos</a>
+                <a href="../index.html#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
+                <a href="../index.html#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
                 <button id="reserveTop" class="cta-shimmer animate ml-2 text-sm">Réserver</button>
             </nav>
         </div>
     </header>
 
-    <div id="mobileMenu" class="fixed inset-0 z-50 menu-overlay">
+    <div id="mobileMenu" class="fixed inset-0 z-50 menu-overlay ">
         <div class="absolute inset-0 bg-black/40" id="menuOverlay"></div>
-        <aside class="absolute right-0 top-0 h-full w-80 bg-white shadow-lg p-6 mobile-menu">
+        <aside class="absolute right-0 top-0 h-full w-80 bg-primary-blue shadow-lg p-6 mobile-menu">
             <div class="flex justify-between items-center mb-8">
                 <div class="flex items-center gap-2">
-                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <img src="../assets/logo-bg.png" style="width: 175px; height: 60px;" alt="">
+
+                    <!-- <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="g-mobile" x1="0" x2="1">
                                 <stop offset="0" stop-color="var(--primary-blue)" />
@@ -221,16 +357,16 @@
                         <rect width="48" height="48" rx="10" fill="url(#g-mobile)" />
                         <path d="M16 32 L32 24 L16 16 Z" fill="white" opacity="0.95" />
                     </svg>
-                    <div class="font-bold font-heading">JB Formation</div>
+                    <div class="font-bold font-heading">JB Formation</div> -->
                 </div>
-                <button id="closeMenu" class="p-1 rounded-full hover:bg-neutral-100 transition-colors">
+                <button id="closeMenu" class="p-1 rounded-full text-white hover:bg-neutral-100 transition-colors">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
-            <nav class="flex flex-col gap-2">
+            <nav class="flex flex-col text-white gap-2">
                 <a href="../index.html" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Accueil</a>
                 <a href="../index.html#formations" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Formations</a>
                 <a href="../index.html#about" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">À propos</a>
@@ -243,12 +379,12 @@
 
     <main class="pt-24 md:pt-28">
 
-        <section class="bg-primary-blue text-white py-16">
+        <section class="bg-gradient-to-r from-primary-blue to-primary-teal text-white py-16 section-pattern">
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight font-heading fade-in">
-                    Formation <span class="text-primary-teal">Achat en Chine</span> (Alibaba)
+                    Formation <span class="text-white">Achat en Chine</span> (Alibaba)
                 </h1>
-                <p class="text-neutral-300 text-lg mt-4 max-w-2xl mx-auto fade-in">
+                <p class="text-neutral-100 text-lg mt-4 max-w-2xl mx-auto fade-in">
                     Devenez un pro de l'importation. Apprenez à identifier des fournisseurs fiables, à négocier et à sécuriser vos livraisons depuis la Chine vers le Cameroun.
                 </p>
                 <div class="mt-8 flex justify-center fade-in">
@@ -258,29 +394,29 @@
         </section>
 
         <section class="max-w-7xl mx-auto px-4 py-16">
-            <div class="bg-white rounded-2xl shadow-lg p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center fade-in">
-                <div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center fade-in">
+                <div class="stat-card">
                     <h3 class="text-neutral-600 text-sm font-semibold mb-2">Prix</h3>
-                    <p class="text-4xl font-bold text-primary-blue">50 000 XAF</p>
+                    <p class="stat-number">10 000 XAF</p>
                 </div>
-                <div>
+                <div class="stat-card">
                     <h3 class="text-neutral-600 text-sm font-semibold mb-2">Durée</h3>
-                    <p class="text-4xl font-bold text-primary-blue">Accès à vie</p>
-                    <p class="text-sm text-neutral-500">Contenu mis à jour régulièrement</p>
+                    <p class="stat-number">Accès à vie</p>
+                    <p class="text-sm text-neutral-500 mt-1">Contenu mis à jour régulièrement</p>
                 </div>
-                <div>
+                <div class="stat-card">
                     <h3 class="text-neutral-600 text-sm font-semibold mb-2">Format</h3>
-                    <p class="text-4xl font-bold text-primary-blue">En Ligne</p>
-                    <p class="text-sm text-neutral-500">Modules vidéo + Groupe WhatsApp</p>
+                    <p class="stat-number">En Ligne</p>
+                    <p class="text-sm text-neutral-500 mt-1">Modules vidéo + Groupe WhatsApp</p>
                 </div>
             </div>
         </section>
 
-        <section id="programme" class="max-w-7xl mx-auto px-4 py-16">
-            <h2 class="text-3xl font-bold font-heading mb-6 text-center fade-in">Contenu détaillé de la formation</h2>
-            <div class="space-y-12">
+        <section id="programme" class="max-w-7xl mx-auto px-4 py-16 section-pattern">
+            <h2 class="text-3xl font-bold font-heading mb-12 text-center fade-in">Contenu détaillé de la formation</h2>
+            <div class="space-y-8">
 
-                <article class="bg-white rounded-2xl shadow-lg p-8 border-l-8 border-primary-teal module-card fade-in">
+                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-teal);">
                     <h3 class="text-xl font-bold font-heading text-primary-teal mb-3">Module 1 : Maîtriser les bases d'Alibaba</h3>
                     <p class="text-neutral-700 mb-4">Ce module vous guide pas à pas pour configurer votre profil et comprendre le fonctionnement de la plateforme, un prérequis pour toute transaction réussie.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
@@ -291,7 +427,7 @@
                     </ul>
                 </article>
 
-                <article class="bg-white rounded-2xl shadow-lg p-8 border-l-8 border-primary-blue module-card fade-in">
+                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-blue);">
                     <h3 class="text-xl font-bold font-heading text-primary-blue mb-3">Module 2 : Sourcing et sélection de produits</h3>
                     <p class="text-neutral-700 mb-4">Apprenez les techniques pour trouver les meilleurs produits et les fournisseurs les plus fiables, en évitant les arnaques et les intermédiaires.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
@@ -302,7 +438,7 @@
                     </ul>
                 </article>
 
-                <article class="bg-white rounded-2xl shadow-lg p-8 border-l-8 border-primary-teal module-card fade-in">
+                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-teal);">
                     <h3 class="text-xl font-bold font-heading text-primary-teal mb-3">Module 3 : Négociation et commande</h3>
                     <p class="text-neutral-700 mb-4">Maîtrisez l'art de la négociation pour obtenir les meilleurs prix et conditions, et sécurisez votre transaction avec les bons outils.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
@@ -313,32 +449,97 @@
                     </ul>
                 </article>
                 
-                <article class="bg-white rounded-2xl shadow-lg p-8 border-l-8 border-primary-blue module-card fade-in">
+                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-blue);">
                     <h3 class="text-xl font-bold font-heading text-primary-blue mb-3">Module 4 : Logistique et expédition</h3>
                     <p class="text-neutral-700 mb-4">Comprenez le processus d'expédition, de la préparation de la commande à la réception des produits au Cameroun.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
                         <li>Différences entre fret aérien, maritime et express.</li>
                         <li>Choix du transitaire et gestion du dédouanement.</li>
                         <li>Calculer les coûts totaux d'importation (droits de douane, taxes).</li>
-                        <li>Suivi de votre commande et réception des produits.</li>
+                        <li>Suivi de votre commande и réception des produits.</li>
                     </ul>
                 </article>
 
             </div>
         </section>
 
-        <section id="inscription" class="max-w-7xl mx-auto px-4 py-16 text-center bg-white rounded-2xl border border-neutral-200 shadow-md">
+        <section class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold font-heading mb-8 text-center fade-in">Ce que vous allez maîtriser</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-md fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-blue/10 flex items-center justify-center text-primary-blue">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Compétences techniques</h3>
+                    </div>
+                    <ul class="space-y-2 text-neutral-600">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Navigation experte sur Alibaba</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Évaluation de la fiabilité des fournisseurs</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Calcul des coûts d'importation complets</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-md fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-blue/10 flex items-center justify-center text-primary-blue">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Avantages business</h3>
+                    </div>
+                    <ul class="space-y-2 text-neutral-600">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Réduction des coûts d'achat de 30 à 60%</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Éviter les arnaques et produits contrefaits</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Processus de dédouanement simplifié</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscription" class="max-w-7xl mx-auto px-4 py-16 text-center bg-gradient-to-r from-primary-blue to-primary-teal rounded-2xl text-white">
             <h3 class="text-3xl font-bold mb-4 font-heading fade-in">Prêt à démarrer votre business d'importation ?</h3>
-            <p class="text-neutral-600 max-w-xl mx-auto mb-8 fade-in">Réservez votre place dès maintenant et accédez à une formation complète qui transformera la façon dont vous faites du commerce.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button id="reserveTopMobile" class="cta-shimmer animate px-6 py-3 rounded-md">Réserver ma place</button>
+            <p class="max-w-xl mx-auto mb-8 opacity-90 fade-in">Réservez votre place dès maintenant et accédez à une formation complète qui transformera la façon dont vous faites du commerce.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                <button id="openEnroll" class="bg-white text-primary-blue px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors shadow-md">Réserver ma place</button>
+                <a href="../index.html#formations" class="px-6 py-3 rounded-md bg-white/10 hover:bg-white/20 transition-colors font-semibold border border-white/30">Voir les autres formations</a>
             </div>
         </section>
 
     </main>
 
     <footer class="mt-20 py-12 bg-primary-blue text-white">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
             <div class="space-y-4">
                 <div class="flex items-center gap-2">
                     <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -354,11 +555,20 @@
             </div>
 
             <div class="space-y-4">
+                <h4 class="text-lg font-bold font-heading">Formations</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="../index.html#formations" class="text-neutral-300 hover:text-white transition-colors">Achat en Chine (Alibaba)</a></li>
+                    <li><a href="../index.html#formations" class="text-neutral-300 hover:text-white transition-colors">Monétisation TikTok</a></li>
+                    <li><a href="../index.html#formations" class="text-neutral-300 hover:text-white transition-colors">Pack Double Formation</a></li>
+                    <li><a href="../index.html#testimonials" class="text-neutral-300 hover:text-white transition-colors">Témoignages</a></li>
+                </ul>
+            </div>
+            
+            <div class="space-y-4">
                 <h4 class="text-lg font-bold font-heading">Liens utiles</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="index.html#formations" class="text-neutral-300 hover:text-white transition-colors">Nos formations</a></li>
-                    <li><a href="index.html#about" class="text-neutral-300 hover:text-white transition-colors">À propos de nous</a></li>
-                    <li><a href="index.html#faq" class="text-neutral-300 hover:text-white transition-colors">FAQ</a></li>
+                    <li><a href="../index.html#about" class="text-neutral-300 hover:text-white transition-colors">À propos de nous</a></li>
+                    <li><a href="../index.html#faq" class="text-neutral-300 hover:text-white transition-colors">FAQ</a></li>
                     <li><a href="#" class="text-neutral-300 hover:text-white transition-colors">Mentions légales</a></li>
                     <li><a href="#" class="text-neutral-300 hover:text-white transition-colors">Politique de confidentialité</a></li>
                 </ul>
@@ -367,9 +577,9 @@
             <div class="space-y-4">
                 <h4 class="text-lg font-bold font-heading">Nous contacter</h4>
                 <ul class="space-y-2 text-sm">
-                    <!-- <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg> contact@jbformation.com</li> -->
-                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M22.02 12c0 5.518-4.482 10-10 10S2.02 17.518 2.02 12c0-5.517 4.482-10 10-10s10 4.483 10 10zM12 2a10 10 0 100 20 10 10 0 000-20zM12 6a1 1 0 00-1 1v4h-4a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V7a1 1 0 00-1-1z"></path></svg> +237 682 252 932</li>
                     <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.257 2.76 7.91 6.84 9.135L12 22l3.16-1.135C19.24 19.91 22 16.257 22 12c0-5.523-4.477-10-10-10zm0 14c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"></path></svg> Bafoussam, Cameroun</li>
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg> contact@jbformation.com</li>
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 24 24"><path d="M22.02 12c0 5.518-4.482 10-10 10S2.02 17.518 2.02 12c0-5.517 4.482-10 10-10s10 4.483 10 10zM12 2a10 10 0 100 20 10 10 0 000-20zM12 6a1 1 0 00-1 1v4h-4a1 1 0 100 2h4v4a1 1 0 102 0v-4h4a1 1 0 100-2h-4V7a1 1 0 00-1-1z"></path></svg> +237 682 252 932</li>
                 </ul>
             </div>
         </div>
@@ -378,8 +588,9 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/682252932" target="_blank" aria-label="Contact WhatsApp" class="fixed right-4 bottom-4 z-50 rounded-full p-4 hover:scale-110 transition-transform">
-        <i class="fab fa-whatsapp" style="color: green; transform: scale(2)"></i>
+    <a href="https://wa.me/682252932" target="_blank" aria-label="Contact WhatsApp" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Contactez-nous au +237 682 252 932</span>
     </a>
 
      <div id="enrollModal" class="fixed inset-0 z-50 modal-container">
@@ -398,21 +609,26 @@
 
                 <form id="enrollForm" class="space-y-5">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-neutral-700 mb-1">Nom complet</label>
-                        <input name="name" id="name" required placeholder="Votre nom" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all" />
+                        <label for="name" class="block text-sm font-medium text-neutral-700 mb-1">Nom complet *</label>
+                        <input name="name" id="name" required placeholder="Votre nom complet" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all" />
                     </div>
                     
                     <div>
-                        <label for="phone" class="block text-sm font-medium text-neutral-700 mb-1">Téléphone</label>
+                        <label for="phone" class="block text-sm font-medium text-neutral-700 mb-1">Téléphone *</label>
                         <input name="phone" id="phone" required placeholder="ex: 682252932" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all" />
                     </div>
                     
                     <div>
-                        <label for="module" class="block text-sm font-medium text-neutral-700 mb-1">Formation choisie</label>
+                        <label for="location" class="block text-sm font-medium text-neutral-700 mb-1">Ville *</label>
+                        <input name="location" id="location" required placeholder="Votre ville" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all" />
+                    </div>
+                    
+                    <div>
+                        <label for="module" class="block text-sm font-medium text-neutral-700 mb-1">Formation choisie *</label>
                         <select name="module" id="module" class="w-full p-3 ring-1 ring-neutral-200 rounded-lg focus:ring-2 focus:ring-primary-blue transition-all bg-white">
-                            <option value="Achat en Chine">Achat en Chine (Alibaba) - 50 000 XAF</option>
-                            <option value="TikTok">Création & Monétisation TikTok - 35 000 XAF</option>
-                            <option value="Double">Pack Double Formation - 75 000 XAF</option>
+                            <option value="Achat en Chine">Achat en Chine (Alibaba) - 10 000 XAF</option>
+                            <option value="TikTok">Création & Monétisation TikTok - 5 000 XAF</option>
+                            <option value="Double">Pack Double Formation - 12 000 XAF</option>
                         </select>
                     </div>
                     
@@ -428,6 +644,16 @@
     </div>
     
     <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
         gsap.registerPlugin(ScrollTrigger);
         gsap.utils.toArray('.fade-in, .module-card').forEach(el => {
             gsap.fromTo(el, {
@@ -444,7 +670,6 @@
                 }
             });
         });
-
 
         // Mobile menu functionality
         const btnMenu = document.getElementById('btnMenu');
@@ -474,10 +699,9 @@
             });
         });
 
-
         // Enrollment modal functionality
         const enrollModal = document.getElementById('enrollModal');
-        const openEnrollBtns = document.querySelectorAll('#reserveTop, #reserveTopMobile, #heroReserve, .reserveBtn, #openEnroll');
+        const openEnrollBtns = document.querySelectorAll('#reserveTop, #reserveTopMobile, #openEnroll');
         const closeEnrollBtn = document.getElementById('closeEnroll');
         const modalOverlay = document.getElementById('modalOverlay');
         const enrollForm = document.getElementById('enrollForm');
@@ -510,9 +734,10 @@
             event.preventDefault();
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
+            const location = document.getElementById('location').value;
             const module = document.getElementById('module').value;
 
-            const message = `Bonjour JB, je suis intéressé(e) par la formation *"${module}"* et je souhaite réserver ma place. \n\n*Nom*: ${name}\n*Téléphone*: ${phone}\n\nMerci.`;
+            const message = `Bonjour JB, je suis intéressé(e) par la formation *"${module}"* et je souhaite réserver ma place. \n\n*Nom*: ${name}\n*Téléphone*: ${phone}\n*Ville*: ${location}\n\nMerci de me recontacter pour finaliser mon inscription.`;
             const whatsappUrl = `https://wa.me/682252932?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         });
