@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://jbformation.fobs.dev/</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://jbformation.fobs.dev/assets/logo_2-bg.png</image:loc>
+      <image:title>JB Formation Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Module Achat en Chine -->
+  <url>
+    <loc>https://jbformation.fobs.dev/pages/module-achat.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Module TikTok -->
+  <url>
+    <loc>https://jbformation.fobs.dev/pages/module-tiktok.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+</urlset>

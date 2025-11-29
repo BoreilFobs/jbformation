@@ -3,20 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow" />
-    <link rel="canonical" href="https://jbformation.fobs.dev/" />
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo 2.png" sizes="32x32">
     <link rel="apple-touch-icon" href="assets/logo 2.png" sizes="180x180">
     <meta name="theme-color" content="#003366">
-    
-    <!-- Preconnect to external resources for better performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- SEO: Social Preview -->
     <meta property="og:title" content="JB Formation — Achat en Chine & Monétisation TikTok">
@@ -30,13 +20,9 @@
     <meta name="twitter:title" content="JB Formation — Achat en Chine & Monétisation TikTok">
     <meta name="twitter:description" content="Double formation : Achat en Chine (Alibaba) + Création & Monétisation TikTok. Réserve ta place !">
     <meta name="twitter:image" content="assets/preview.jpg">
-    
-    <!-- SEO Keywords -->
-    <meta name="keywords" content="formation achat chine, alibaba cameroun, formation tiktok, monétisation tiktok, importation chine cameroun, business en ligne, e-commerce cameroun, formation digitale bafoussam, dropshipping cameroun, créateur contenu tiktok" />
-    
-    <title>JB Formation — Formation Achat Chine (Alibaba) & Monétisation TikTok | Cameroun</title>
-    <meta name="description" content="Formations professionnelles en ligne : Maîtrisez l'import depuis la Chine via Alibaba et la monétisation TikTok. Places limitées. Support WhatsApp 24/7. Prix accessible au Cameroun." />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <title>JB Formation — Achat en Chine & Monétisation TikTok</title>
+    <meta name="description" content="Double formation : Achat en Chine (Alibaba) + Création & Monétisation TikTok. Réserve ta place !" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -72,26 +58,70 @@
         }
     </script>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <style>
-        :root {
-            --primary-blue: #003366;
-            --primary-teal: #00796B;
-            --accent-orange: #FF6B35;
-            --accent-purple: #6A4C93;
-            --bg-light-blue: #F0F8FF;
-        }
+    <!-- Styles personnalisés -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-bg-light-blue text-text-dark leading-relaxed">
 
-        /* Accessibility: Focus visible pour navigation clavier */
-        *:focus-visible {
-            outline: 3px solid var(--accent-orange);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
+    <!-- Skip to main content pour accessibilité clavier -->
+    <a href="#main-content" class="skip-to-main">Aller au contenu principal</a>
+
+    <header class="fixed w-full z-40 top-0 left-0 bg-white/90 backdrop-blur-sm transition-all duration-300" role="banner">
+        <div class="max-w-7xl mx-auto bg-primary-blue  px-4  flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2" aria-label="JB Formation - Retour à l'accueil">
+                <img src="assets/logo_2-bg.png" style="width: 80px; height: auto;" alt="Logo JB Formation" loading="eager">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="g" x1="0" x2="1">
+                            <stop offset="0" stop-color="var(--primary-blue)" />
+                            <stop offset="1" stop-color="var(--primary-teal)" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="48" height="48" rx="12" fill="url(#g)"/>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="24" font-weight="700">JB</text>
+                </svg>
+                <span class="font-bold text-xl text-white font-heading">JB Formation</span>
+            </a>
+            <nav class="hidden md:flex gap-6" role="navigation" aria-label="Navigation principale">
+                <a href="#formations" class="hover:text-primary-blue transition-colors font-medium">Formations</a>
+                <a href="#prix" class="hover:text-primary-blue transition-colors font-medium">Tarifs</a>
+                <a href="#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
+                <a href="#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
+                <button id="reserveTop" class="cta-shimmer animate btn-ripple ml-2 text-sm" aria-label="Réserver une formation">Réserver</button>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="btnMenu" aria-label="Ouvrir le menu" class="p-2 text-white rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-100 transition-colors hamburger">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="hidden md:flex gap-6 items-center text-white text-sm" role="navigation" aria-label="Navigation principale">
+                <a href="#formations" class="hover:text-primary-blue transition-colors font-medium">Formations</a>
+                <a href="#prix" class="hover:text-primary-blue transition-colors font-medium">Tarifs</a>
+                <a href="#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
+                <a href="#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
+                <button id="reserveTop" class="cta-shimmer animate btn-ripple ml-2 text-sm" aria-label="Réserver une formation">Réserver</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu mobile overlay -->
+    <div class="menu-overlay fixed inset-0 bg-black/50 z-30" id="menuOverlay"></div>
+
+    <!-- Menu mobile sidebar -->
+    <div class="mobile-menu fixed top-0 right-0 h-full bg-white shadow-2xl z-50 px-6 py-8 w-80" role="dialog" aria-label="Menu mobile" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-xl font-bold font-heading" id="mobile-menu-title">Menu</h2>
+            <button id="closeMenu" class="p-1 rounded-full text-white hover:bg-neutral-100 transition-colors" aria-label="Fermer le menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
         /* Skip to main content link */
         .skip-to-main {
@@ -173,8 +203,8 @@
 
         /* Custom fade-in animation for elements on scroll */
         .fade-in {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 0;
+            transform: translateY(20px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
@@ -296,6 +326,41 @@
 
         .faq-arrow.rotated {
             transform: rotate(180deg);
+        }
+
+        /* Loading animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(0, 51, 102, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--primary-blue);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Floating WhatsApp button styling */
@@ -530,7 +595,7 @@
     <header class="fixed w-full z-40 top-0 left-0 bg-white/90 backdrop-blur-sm transition-all duration-300" role="banner">
         <div class="max-w-7xl mx-auto bg-primary-blue  px-4  flex items-center justify-between">
             <a href="#" class="flex items-center gap-2" aria-label="JB Formation - Retour à l'accueil">
-                <img src="assets/logo_2-bg.png" style="width: 80px; height: auto;" alt="Logo JB Formation - Formations en ligne Alibaba et TikTok" loading="eager" width="80" height="80">
+                <img src="assets/logo_2-bg.png" style="width: 80px; height: auto;" alt="Logo JB Formation" loading="eager">
                 <!-- <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                     <defs>
                         <linearGradient id="g" x1="0" x2="1">
@@ -563,7 +628,7 @@
                 <a href="#about" class="hover:text-primary-blue transition-colors font-medium">À propos</a>
                 <a href="#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
                 <a href="#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
-                <button id="reserveTop" class="cta-shimmer animate ml-2 text-sm" aria-label="Réserver une formation">Réserver</button>
+                <button id="reserveTop" class="cta-shimmer animate btn-ripple ml-2 text-sm" aria-label="Réserver une formation">Réserver</button>
             </nav>
         </div>
     </header>
@@ -573,7 +638,7 @@
         <aside class="absolute right-0 top-0 h-full w-80 bg-primary-blue shadow-lg p-6 mobile-menu" role="navigation" aria-label="Menu mobile">
             <div class="flex justify-between items-center mb-8">
                 <div class="flex items-center gap-2">
-                <img src="assets/logo_2-bg.png" style="width: 80px; height: auto;" alt="Logo JB Formation - Formations professionnelles" loading="lazy" width="80" height="80">
+                <img src="assets/logo_2-bg.png" style="width: 80px; height: auto;" alt="Logo JB Formation" loading="lazy">
 
                     <!-- <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -600,7 +665,7 @@
                 <a href="#about" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">À propos</a>
                 <a href="#testimonials" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Témoignages</a>
                 <a href="#faq" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">FAQ</a>
-                <button id="reserveTopMobile" class="mt-4 cta-shimmer animate w-full py-3">Réserver ma place</button>
+                <button id="reserveTopMobile" class="mt-4 cta-shimmer animate btn-ripple w-full py-3">Réserver ma place</button>
             </nav>
         </aside>
     </div>
@@ -614,7 +679,7 @@
                 <p class="text-neutral-600 text-lg md:text-xl max-w-3xl mx-auto fade-in">Pack exclusif combinant <strong class="text-primary-blue">Achat en Chine (Alibaba)</strong> + <strong class="text-primary-teal">Création & Monétisation TikTok</strong>. Places limitées — groupe WhatsApp d'accompagnement inclus.</p>
 
                 <div class="flex flex-col sm:flex-row gap-4 items-center justify-center fade-in mt-8">
-                    <button id="heroReserve" class="cta-shimmer animate shadow-md text-base px-8 py-4 w-full sm:w-auto">Réserver ma place</button>
+                    <button id="heroReserve" class="cta-shimmer animate btn-ripple shadow-md text-base px-8 py-4 w-full sm:w-auto">Réserver ma place</button>
                     <a href="#formations" class="px-6 py-3 rounded-lg ring-1 ring-neutral-300 hover:bg-white transition-colors text-sm font-semibold text-primary-blue flex items-center gap-2">
                         <span>Découvrir les formations</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -685,9 +750,6 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
                 <article class="pricing-card fade-in" data-module="achat">
-                    <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                        Places limitées
-                    </div>
                     <div class="pricing-header">
                         <h3 class="text-2xl font-bold font-heading">Achat en Chine (Alibaba)</h3>
                         <div class="mt-4">
@@ -707,7 +769,7 @@
                         </ul>
                         
                         <div class="mt-8 flex flex-col gap-3">
-                            <button class="reserveBtn px-6 py-3 rounded-lg cta-shimmer animate" data-module="Achat en Chine">Réserver cette formation</button>
+                            <button class="reserveBtn px-6 py-3 rounded-lg cta-shimmer animate btn-ripple" data-module="Achat en Chine">Réserver cette formation</button>
                             <a href="pages/module-achat.html" class="px-6 py-3 rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-50 transition-colors text-center font-semibold text-primary-blue">Voir le programme détaillé</a>
                         </div>
                     </div>
@@ -733,7 +795,7 @@
                         </ul>
                         
                         <div class="mt-8 flex flex-col gap-3">
-                            <button class="reserveBtn px-6 py-3 rounded-lg cta-shimmer animate" data-module="TikTok">Réserver cette formation</button>
+                            <button class="reserveBtn px-6 py-3 rounded-lg cta-shimmer animate btn-ripple" data-module="TikTok">Réserver cette formation</button>
                             <a href="pages/module-tiktok.html" class="px-6 py-3 rounded-lg ring-1 ring-neutral-200 hover:bg-neutral-50 transition-colors text-center font-semibold text-primary-blue">Voir le programme détaillé</a>
                         </div>
                     </div>
@@ -856,73 +918,85 @@
             <h3 class="text-3xl font-bold mb-2 text-center font-heading fade-in">Ils témoignent</h3>
             <p class="text-neutral-600 mb-12 text-center fade-in">Découvrez les retours de nos étudiants satisfaits</p>
             
-            <div class="testimonial-carousel mb-8" id="testiCarousel">
-                <blockquote class="testimonial-slide p-8 rounded-2xl bg-bg-light-blue shadow-md border-l-4 border-primary-teal">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=60" alt="Léa" class="w-full h-full object-cover">
+            <div class="testimonial-wrapper relative">
+                <!-- Bouton Précédent -->
+                <button class="carousel-nav-btn prev btn-ripple" aria-label="Témoignage précédent">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                
+                <!-- Bouton Suivant -->
+                <button class="carousel-nav-btn next btn-ripple" aria-label="Témoignage suivant">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+                
+                <div class="testimonial-carousel mb-8" id="testiCarousel" role="region" aria-label="Carousel de témoignages">
+                    <blockquote class="testimonial-slide p-8 rounded-2xl bg-bg-light-blue shadow-md border-l-4 border-primary-teal">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=60" alt="Léa" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="font-bold">Léa, Bafoussam</div>
+                                <div class="text-sm text-neutral-500">Formation Achat en Chine</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-bold">Léa, Bafoussam</div>
-                            <div class="text-sm text-neutral-500">Formation Achat en Chine</div>
+                        <div class="flex mb-3" aria-label="5 étoiles sur 5">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                         </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="italic text-neutral-700">"Grâce à la formation, j'ai importé mes premiers produits et fait mes premières ventes ! Le processus était clair et le formateur très disponible pour répondre à mes questions. Le groupe WhatsApp est un vrai plus pour ne pas rester bloqué."</p>
-                </blockquote>
+                        <p class="italic text-neutral-700">"Grâce à la formation, j'ai importé mes premiers produits et fait mes premières ventes ! Le processus était clair et le formateur très disponible pour répondre à mes questions. Le groupe WhatsApp est un vrai plus pour ne pas rester bloqué."</p>
+                    </blockquote>
 
-                <blockquote class="testimonial-slide p-8 rounded-2xl bg-bg-light-blue shadow-md border-l-4 border-primary-teal">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=60" alt="Paul" class="w-full h-full object-cover">
+                    <blockquote class="testimonial-slide p-8 rounded-2xl bg-bg-light-blue shadow-md border-l-4 border-primary-teal">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=60" alt="Paul" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="font-bold">Paul, Douala</div>
+                                <div class="text-sm text-neutral-500">Formation TikTok</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-bold">Paul, Douala</div>
-                            <div class="text-sm text-neutral-500">Formation TikTok</div>
+                        <div class="flex mb-3" aria-label="5 étoiles sur 5">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                         </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="italic text-neutral-700">"Les techniques TikTok ont doublé mes abonnés en un mois. J'ai enfin réussi à activer la monétisation et je commence à générer des revenus réguliers. La formation est très concrète avec des exemples précis adaptés au marché africain."</p>
-                </blockquote>
+                        <p class="italic text-neutral-700">"Les techniques TikTok ont doublé mes abonnés en un mois. J'ai enfin réussi à activer la monétisation et je commence à générer des revenus réguliers. La formation est très concrète avec des exemples précis adaptés au marché africain."</p>
+                    </blockquote>
 
-                <blockquote class="testimonial-slide p-8 rounded-2xl bg-bg-light-blue shadow-md border-l-4 border-primary-teal">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=60" alt="Sophie" class="w-full h-full object-cover">
+                    <blockquote class="testimonial-slide p-8 rounded-2xl bg-bg-light-blue shadow-md border-l-4 border-primary-teal">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-neutral-200 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=60" alt="Sophie" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="font-bold">Sophie, Yaoundé</div>
+                                <div class="text-sm text-neutral-500">Pack Double Formation</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-bold">Sophie, Yaoundé</div>
-                            <div class="text-sm text-neutral-500">Pack Double Formation</div>
+                        <div class="flex mb-3" aria-label="5 étoiles sur 5">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
                         </div>
-                    </div>
-                    <div class="flex mb-3">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="italic text-neutral-700">"Le pack complet était parfait pour moi. J'importe des produits de Chine et je les vends via TikTok. Une combinaison gagnante ! J'ai déjà remboursé mon investissement en 2 mois seulement. Je recommande vivement."</p>
-                </blockquote>
+                        <p class="italic text-neutral-700">"Le pack complet était parfait pour moi. J'importe des produits de Chine et je les vends via TikTok. Une combinaison gagnante ! J'ai déjà remboursé mon investissement en 2 mois seulement. Je recommande vivement."</p>
+                    </blockquote>
+                </div>
             </div>
             
             <div class="flex justify-center mt-6">
-                <div class="flex gap-2">
-                    <div class="w-2.5 h-2.5 rounded-full bg-primary-blue testimonial-dot active" data-index="0"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-neutral-400 testimonial-dot" data-index="1"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-neutral-400 testimonial-dot" data-index="2"></div>
+                <div class="flex gap-2" role="tablist" aria-label="Sélection de témoignage">
+                    <button class="w-2.5 h-2.5 rounded-full bg-primary-blue testimonial-dot active btn-ripple" data-index="0" role="tab" aria-label="Témoignage 1" aria-selected="true"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-neutral-400 testimonial-dot btn-ripple" data-index="1" role="tab" aria-label="Témoignage 2" aria-selected="false"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-neutral-400 testimonial-dot btn-ripple" data-index="2" role="tab" aria-label="Témoignage 3" aria-selected="false"></button>
                 </div>
             </div>
         </section>
@@ -1123,222 +1197,13 @@
                         </label>
                     </div>
                     
-                    <button type="submit" class="w-full cta-shimmer animate px-6 py-3 text-lg font-semibold mt-4">Confirmer ma réservation</button>
+                    <button type="submit" class="w-full cta-shimmer animate btn-ripple px-6 py-3 text-lg font-semibold mt-4">Confirmer ma réservation</button>
                 </form>
             </div>
         </div>
     </div>
     
-    <!-- JSON-LD Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "JB Formation",
-      "description": "Formations professionnelles en ligne : Achat en Chine (Alibaba) et Monétisation TikTok",
-      "url": "https://jbformation.fobs.dev",
-      "logo": "https://jbformation.fobs.dev/assets/logo_2-bg.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bafoussam",
-        "addressCountry": "CM"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+237-682-252-932",
-        "contactType": "Customer Service",
-        "availableLanguage": "French"
-      },
-      "sameAs": [
-        "https://wa.me/682252932"
-      ],
-      "offers": [
-        {
-          "@type": "Course",
-          "name": "Formation Achat en Chine (Alibaba)",
-          "description": "Maîtrisez l'import depuis la Chine : trouver des fournisseurs fiables, négocier les prix, gérer la logistique",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "JB Formation"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "10000",
-            "priceCurrency": "XAF",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Course",
-          "name": "Formation Création & Monétisation TikTok",
-          "description": "Développez une audience engagée sur TikTok et transformez votre créativité en source de revenus",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "JB Formation"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "5000",
-            "priceCurrency": "XAF",
-            "availability": "https://schema.org/InStock"
-          }
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "250",
-        "bestRating": "5"
-      }
-    }
-    </script>
-    
-    <script>
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // GSAP ScrollTrigger for fade-in animations
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.utils.toArray('.fade-in').forEach(el => {
-            gsap.fromTo(el, {
-                opacity: 0,
-                y: 20
-            }, {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: el,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none'
-                }
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu functionality
-        const btnMenu = document.getElementById('btnMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenu = document.getElementById('closeMenu');
-        const menuOverlay = document.getElementById('menuOverlay');
-        const hamburgerIcon = btnMenu.querySelector('svg');
-
-        function toggleMenu() {
-            mobileMenu.classList.toggle('active');
-            mobileMenu.querySelector('aside').classList.toggle('open');
-            btnMenu.classList.toggle('open');
-            hamburgerIcon.innerHTML = mobileMenu.classList.contains('active') ?
-                `<path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` :
-                `<path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
-        }
-        btnMenu.addEventListener('click', toggleMenu);
-        closeMenu.addEventListener('click', toggleMenu);
-        menuOverlay.addEventListener('click', toggleMenu);
-
-        // Close menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (mobileMenu.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-        });
-
-        // Testimonial carousel functionality
-        const testiCarousel = document.getElementById('testiCarousel');
-        const testimonialDots = document.querySelectorAll('.testimonial-dot');
-
-        testiCarousel.addEventListener('scroll', () => {
-            const activeIndex = Math.round(testiCarousel.scrollLeft / testiCarousel.offsetWidth);
-            testimonialDots.forEach((dot, index) => {
-                if (index === activeIndex) {
-                    dot.classList.add('active', 'bg-primary-blue');
-                    dot.classList.remove('bg-neutral-400');
-                } else {
-                    dot.classList.remove('active', 'bg-primary-blue');
-                    dot.classList.add('bg-neutral-400');
-                }
-            });
-        });
-
-        testimonialDots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = dot.dataset.index;
-                testiCarousel.scrollTo({
-                    left: testiCarousel.offsetWidth * index,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // FAQ accordion
-        document.querySelectorAll('.faqBtn').forEach(button => {
-            button.addEventListener('click', () => {
-                const panel = button.nextElementSibling;
-                const arrow = button.querySelector('.faq-arrow');
-                panel.classList.toggle('open');
-                arrow.classList.toggle('rotated');
-            });
-        });
-
-        // Enrollment modal functionality
-        const enrollModal = document.getElementById('enrollModal');
-        const openEnrollBtns = document.querySelectorAll('#reserveTop, #reserveTopMobile, #heroReserve, .reserveBtn, #openEnroll');
-        const closeEnrollBtn = document.getElementById('closeEnroll');
-        const modalOverlay = document.getElementById('modalOverlay');
-        const enrollForm = document.getElementById('enrollForm');
-        const moduleSelect = document.getElementById('module');
-        const modalContent = enrollModal.querySelector('.modal-content');
-
-        openEnrollBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const module = btn.dataset.module;
-                if (module) {
-                    moduleSelect.value = module;
-                }
-                enrollModal.classList.add('active');
-                modalContent.classList.add('active');
-            });
-        });
-
-        closeEnrollBtn.addEventListener('click', () => {
-            enrollModal.classList.remove('active');
-            modalContent.classList.remove('active');
-        });
-
-        modalOverlay.addEventListener('click', () => {
-            enrollModal.classList.remove('active');
-            modalContent.classList.remove('active');
-        });
-
-        // Form submission
-        enrollForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const location = document.getElementById('location').value;
-            const module = document.getElementById('module').value;
-
-            const message = `Bonjour JB, je suis intéressé(e) par la formation *"${module}"* et je souhaite réserver ma place. \n\n*Nom*: ${name}\n*Téléphone*: ${phone}\n*Ville*: ${location}\n\nMerci de me recontacter pour finaliser mon inscription.`;
-            const whatsappUrl = `https://wa.me/682252932?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
+    <!-- Scripts personnalisés -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

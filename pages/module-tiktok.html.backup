@@ -3,102 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <link rel="canonical" href="https://jbformation.fobs.dev/pages/module-achat.html" />
-    
-    <title>Formation Achat en Chine (Alibaba) - Importation & Sourcing | JB Formation</title>
-    <meta name="description" content="Formation complète pour maîtriser l'achat et l'importation depuis la Chine via Alibaba. Apprenez à identifier des fournisseurs fiables, négocier et gérer la douane au Cameroun. 10 000 XAF." />
-    <meta name="keywords" content="formation alibaba, achat chine cameroun, importation chine, sourcing alibaba, fournisseurs chine, dropshipping cameroun, formation import export, douane cameroun, business import" />
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <title>Formation Création & Monétisation TikTok | JB Formation</title>
+    <meta name="description" content="Découvrez le programme complet de notre formation pour devenir un pro de la création de contenu viral et monétiser votre audience sur TikTok." />
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Enhanced SEO Meta Tags -->
-    <meta property="og:title" content="Formation Achat en Chine (Alibaba) - Importation & Sourcing | JB Formation" />
-    <meta property="og:description" content="Maîtrisez l'achat et l'importation depuis la Chine. Formation pratique : sourcing, négociation, logistique, douane. 10 000 XAF." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://jbformation.fobs.dev/assets/logo 2.png" />
-    <meta property="og:url" content="https://jbformation.fobs.dev/pages/module-achat.html" />
-    <meta property="og:locale" content="fr_FR" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Formation Achat en Chine (Alibaba) | JB Formation" />
-    <meta name="twitter:description" content="Maîtrisez l'achat et l'importation depuis la Chine. Formation pratique avec support WhatsApp inclus." />
-    <meta name="twitter:image" content="https://jbformation.fobs.dev/assets/logo 2.png" />
-    <link rel="icon" type="image/png" href="/assets/logo 2.png" />
-    <link rel="apple-touch-icon" href="/assets/logo 2.png" />
-    
-    <!-- JSON-LD Structured Data for Course -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Formation Achat en Chine (Alibaba)",
-      "description": "Formation complète pour maîtriser l'importation depuis la Chine : sourcing, négociation, logistique et douane au Cameroun",
-      "provider": {
-        "@type": "EducationalOrganization",
-        "name": "JB Formation",
-        "url": "https://jbformation.fobs.dev",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bafoussam",
-          "addressCountry": "CM"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "10000",
-        "priceCurrency": "XAF",
-        "availability": "https://schema.org/InStock",
-        "url": "https://jbformation.fobs.dev/pages/module-achat.html"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "online",
-        "courseWorkload": "PT0H"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "120"
-      }
-    }
-    </script>
-    
-    <!-- Breadcrumb Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://jbformation.fobs.dev/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Formations",
-          "item": "https://jbformation.fobs.dev/#formations"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Formation Achat en Chine (Alibaba)",
-          "item": "https://jbformation.fobs.dev/pages/module-achat.html"
-        }
-      ]
-    }
-    </script>
-    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Formation Création & Monétisation TikTok | JB Formation">
+    <meta property="og:description" content="Découvrez le programme complet de notre formation pour devenir un pro de la création de contenu viral et monétiser votre audience sur TikTok.">
+    <meta property="og:url" content="https://jbformation.fobs.dev/module-tiktok.html">
+    <meta property="og:image" content="/assets/logo 2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Formation Création & Monétisation TikTok | JB Formation">
+    <meta name="twitter:description" content="Découvrez le programme complet de notre formation pour devenir un pro de la création de contenu viral et monétiser votre audience sur TikTok.">
+    <meta name="twitter:image" content="/assets/logo 2.png">
+    <link rel="canonical" href="https://jbformation.com/module-tiktok.html">
+    <link rel="icon" type="image/png" href="/assets/logo 2.png">
+    <link rel="apple-touch-icon" href="/assets/logo 2.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Customizing Tailwind's default theme
@@ -116,7 +39,9 @@
                         'neutral-600': '#6C757D',
                         'whatsapp': '#25D366',
                         'accent-orange': '#FF6B35',
-                        'accent-purple': '#6A4C93'
+                        'accent-purple': '#6A4C93',
+                        'tiktok-red': '#FE2C55',
+                        'tiktok-blue': '#25F4EE'
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
@@ -135,12 +60,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <!-- Styles personnalisés -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
     <style>
         :root {
             --primary-blue: #003366;
             --primary-teal: #00796B;
             --accent-orange: #FF6B35;
             --accent-purple: #6A4C93;
+            --tiktok-red: #FE2C55;
+            --tiktok-blue: #25F4EE;
             --bg-light-blue: #F0F8FF;
         }
 
@@ -229,6 +159,13 @@
 
         .gradient-text {
             background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tiktok-gradient {
+            background: linear-gradient(135deg, var(--tiktok-blue), var(--tiktok-red));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -413,9 +350,9 @@
 </head>
 <body class="bg-bg-light-blue text-text-dark leading-relaxed">
 
-   <a href="#main-content" class="skip-to-main">Aller au contenu principal</a>
+  <a href="#main-content" class="skip-to-main">Aller au contenu principal</a>
 
-   <header class="fixed w-full z-40 top-0 left-0 bg-white/90 backdrop-blur-sm transition-all duration-300" role="banner">
+  <header class="fixed w-full z-40 top-0 left-0 bg-white/90 backdrop-blur-sm transition-all duration-300" role="banner">
         <div class="max-w-7xl mx-auto bg-primary-blue  px-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2" aria-label="JB Formation - Retour à l'accueil">
                 <img src="../assets/logo_2-bg.png" style="width: 80px; height: auto;" alt="Logo JB Formation" loading="eager">
@@ -451,7 +388,7 @@
                 <a href="../index.html#about" class="hover:text-primary-blue transition-colors font-medium">À propos</a>
                 <a href="../index.html#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
                 <a href="../index.html#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
-                <button id="reserveTop" class="cta-shimmer animate ml-2 text-sm">Réserver</button>
+                <button id="reserveTop" class="cta-shimmer animate btn-ripple ml-2 text-sm">Réserver</button>
             </nav>
         </div>
     </header>
@@ -488,60 +425,23 @@
                 <a href="../index.html#about" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">À propos</a>
                 <a href="../index.html#testimonials" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Témoignages</a>
                 <a href="../index.html#faq" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">FAQ</a>
-                <button id="reserveTopMobile" class="mt-4 cta-shimmer animate w-full py-3">Réserver ma place</button>
+                <button id="reserveTopMobile" class="mt-4 cta-shimmer animate btn-ripple w-full py-3">Réserver ma place</button>
             </nav>
         </aside>
     </div>
 
-    <main id="main-content" class="pt-24 md:pt-28" role="main">
-
-        <!-- Breadcrumb Navigation -->
-        <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 py-4">
-            <ol class="flex items-center space-x-2 text-sm text-neutral-600">
-                <li>
-                    <a href="../index.html" class="hover:text-primary-blue transition-colors flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                        </svg>
-                        Accueil
-                    </a>
-                </li>
-                <li><span class="text-neutral-400">/</span></li>
-                <li>
-                    <a href="../index.html#formations" class="hover:text-primary-blue transition-colors">Formations</a>
-                </li>
-                <li><span class="text-neutral-400">/</span></li>
-                <li class="text-primary-blue font-medium" aria-current="page">Achat en Chine (Alibaba)</li>
-            </ol>
-        </nav>
+    <main id="main-content" class="pt-24 md:pt-28 mt-0" role="main">
 
         <section class="bg-gradient-to-r from-primary-blue to-primary-teal text-white py-16 section-pattern">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold shadow-md mb-6 animate-pulse">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
-                    </svg>
-                    Programme complet • Accès à vie
-                </div>
                 <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight font-heading fade-in">
-                    Formation <span class="text-white">Achat en Chine</span> (Alibaba)
+                    Formation Création & <span class="text-white">Monétisation TikTok</span>
                 </h1>
                 <p class="text-neutral-100 text-lg mt-4 max-w-2xl mx-auto fade-in">
-                    Devenez un pro de l’importation. Apprenez à identifier des fournisseurs fiables, à négocier et à sécuriser vos livraisons depuis la Chine vers le Cameroun.
+                    Devenez un créateur de contenu influent. Apprenez à créer des vidéos virales et à transformer votre audience en source de revenus, même depuis le Cameroun.
                 </p>
-                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 fade-in">
-                    <a href="#programme" class="cta-shimmer animate text-base px-6 py-3 inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        Découvrir le programme
-                    </a>
-                    <button id="openEnroll" class="px-6 py-3 bg-white text-primary-blue rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        Réserver maintenant
-                    </button>
+                <div class="mt-8 flex justify-center fade-in">
+                    <a href="#programme" class="cta-shimmer animate btn-ripple text-base px-6 py-3">Découvrir le programme</a>
                 </div>
             </div>
         </section>
@@ -550,7 +450,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center fade-in">
                 <div class="stat-card">
                     <h3 class="text-neutral-600 text-sm font-semibold mb-2">Prix</h3>
-                    <p class="stat-number">10 000 XAF</p>
+                    <p class="stat-number">5 000 XAF</p>
                 </div>
                 <div class="stat-card">
                     <h3 class="text-neutral-600 text-sm font-semibold mb-2">Durée</h3>
@@ -569,47 +469,47 @@
             <h2 class="text-3xl font-bold font-heading mb-12 text-center fade-in">Contenu détaillé de la formation</h2>
             <div class="space-y-8">
 
-                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-teal);">
-                    <h3 class="text-xl font-bold font-heading text-primary-teal mb-3">Module 1 : Maîtriser les bases d'Alibaba</h3>
-                    <p class="text-neutral-700 mb-4">Ce module vous guide pas à pas pour configurer votre profil et comprendre le fonctionnement de la plateforme, un prérequis pour toute transaction réussie.</p>
+                <article class="module-card fade-in" style="border-left: 8px solid var(--tiktok-red);">
+                    <h3 class="text-xl font-bold font-heading text-tiktok-red mb-3">Module 1 : Maîtriser l'algorithme TikTok</h3>
+                    <p class="text-neutral-700 mb-4">Ce module vous plonge au cœur du fonctionnement de TikTok pour vous permettre de créer du contenu qui sera vu par des milliers de personnes.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
-                        <li>Création et optimisation de votre compte acheteur.</li>
-                        <li>Les différents types de fournisseurs (Gold Supplier, Verified Supplier, etc.).</li>
-                        <li>Comprendre les termes commerciaux (EXW, FOB, CIF) et les méthodes de paiement.</li>
-                        <li>Comment utiliser les outils de la plateforme (messagerie, Request for Quotation).</li>
+                        <li>Les règles secrètes de l'algorithme "Pour toi" (For You Page).</li>
+                        <li>Analyse de la niche et identification de votre audience.</li>
+                        <li>Création d'un profil optimisé pour la visibilité.</li>
+                        <li>Les meilleurs moments pour publier pour un maximum d'impact.</li>
                     </ul>
                 </article>
 
-                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-blue);">
-                    <h3 class="text-xl font-bold font-heading text-primary-blue mb-3">Module 2 : Sourcing et sélection de produits</h3>
-                    <p class="text-neutral-700 mb-4">Apprenez les techniques pour trouver les meilleurs produits et les fournisseurs les plus fiables, en évitant les arnaques et les intermédiaires.</p>
+                <article class="module-card fade-in" style="border-left: 8px solid var(--tiktok-blue);">
+                    <h3 class="text-xl font-bold font-heading text-tiktok-blue mb-3">Module 2 : Création de contenu viral</h3>
+                    <p class="text-neutral-700 mb-4">Apprenez les techniques de storytelling et de montage qui font la différence entre une vidéo banale et un contenu qui génère des millions de vues.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
-                        <li>Techniques avancées de recherche de produits sur Alibaba.</li>
-                        <li>Comment vérifier la légitimité et la fiabilité d'un fournisseur.</li>
-                        <li>Identifier un bon produit avec un fort potentiel de vente.</li>
-                        <li>Les questions essentielles à poser avant de démarrer une négociation.</li>
+                        <li>Les 3 secondes qui accrochent : l'art du "hook".</li>
+                        <li>Maîtrise des outils de montage natifs de TikTok.</li>
+                        <li>Utilisation des tendances, des sons et des hashtags pour percer.</li>
+                        <li>Techniques de "storytelling" et d'engagement de la communauté.</li>
                     </ul>
                 </article>
 
-                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-teal);">
-                    <h3 class="text-xl font-bold font-heading text-primary-teal mb-3">Module 3 : Négociation et commande</h3>
-                    <p class="text-neutral-700 mb-4">Maîtrisez l'art de la négociation pour obtenir les meilleurs prix et conditions, et sécurisez votre transaction avec les bons outils.</p>
+                <article class="module-card fade-in" style="border-left: 8px solid var(--tiktok-red);">
+                    <h3 class="text-xl font-bold font-heading text-tiktok-red mb-3">Module 3 : Les stratégies de monétisation</h3>
+                    <p class="text-neutral-700 mb-4">Découvrez toutes les méthodes pour transformer votre audience en revenus, avec des astuces spécifiques aux pays non-éligibles au fonds créateur comme le Cameroun.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
-                        <li>Stratégies de négociation du prix et du MOQ (quantité minimale).</li>
-                        <li>L'importance des échantillons et comment les commander.</li>
-                        <li>Utiliser "Trade Assurance" pour protéger votre paiement.</li>
-                        <li>Créer un contrat d'achat simple et efficace.</li>
+                        <li>Monétisation directe : TikTok Live, Cadeaux, et badges.</li>
+                        <li>Monétisation indirecte : marketing d'affiliation et partenariats.</li>
+                        <li>Vendre ses propres produits physiques ou numériques via TikTok.</li>
+                        <li>Astuces pour la création d'un compte éligible au "Creator Fund" (hors Cameroun).</li>
                     </ul>
                 </article>
                 
-                <article class="module-card fade-in" style="border-left: 8px solid var(--primary-blue);">
-                    <h3 class="text-xl font-bold font-heading text-primary-blue mb-3">Module 4 : Logistique et expédition</h3>
-                    <p class="text-neutral-700 mb-4">Comprenez le processus d'expédition, de la préparation de la commande à la réception des produits au Cameroun.</p>
+                <article class="module-card fade-in" style="border-left: 8px solid var(--tiktok-blue);">
+                    <h3 class="text-xl font-bold font-heading text-tiktok-blue mb-3">Module 4 : Analyse et croissance continue</h3>
+                    <p class="text-neutral-700 mb-4">Apprenez à lire vos statistiques pour optimiser votre stratégie de contenu et maintenir une croissance constante sur le long terme.</p>
                     <ul class="space-y-2 text-neutral-600 list-disc list-inside">
-                        <li>Différences entre fret aérien, maritime et express.</li>
-                        <li>Choix du transitaire et gestion du dédouanement.</li>
-                        <li>Calculer les coûts totaux d'importation (droits de douane, taxes).</li>
-                        <li>Suivi de votre commande и réception des produits.</li>
+                        <li>Analyse des indicateurs clés (vues, temps de visionnage, engagement).</li>
+                        <li>Techniques d'automatisation et de gestion du temps.</li>
+                        <li>Passer de créateur à véritable business.</li>
+                        <li>Conseils pour la gestion de l'image de marque et la communauté.</li>
                     </ul>
                 </article>
 
@@ -622,69 +522,69 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white rounded-2xl p-6 shadow-md fade-in">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 rounded-full bg-primary-blue/10 flex items-center justify-center text-primary-blue">
-                            <i class="fas fa-check-circle"></i>
+                        <div class="w-12 h-12 rounded-full bg-tiktok-red/10 flex items-center justify-center text-tiktok-red">
+                            <i class="fas fa-video"></i>
                         </div>
-                        <h3 class="text-lg font-bold">Compétences techniques</h3>
+                        <h3 class="text-lg font-bold">Création de contenu</h3>
                     </div>
                     <ul class="space-y-2 text-neutral-600">
                         <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-tiktok-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Navigation experte sur Alibaba</span>
+                            <span>Production de vidéos virales et engageantes</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-tiktok-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Évaluation de la fiabilité des fournisseurs</span>
+                            <span>Maîtrise des tendances et algorithmes TikTok</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-tiktok-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Calcul des coûts d'importation complets</span>
+                            <span>Techniques de montage et storytelling avancées</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="bg-white rounded-2xl p-6 shadow-md fade-in">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 rounded-full bg-primary-blue/10 flex items-center justify-center text-primary-blue">
+                        <div class="w-12 h-12 rounded-full bg-tiktok-blue/10 flex items-center justify-center text-tiktok-blue">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="text-lg font-bold">Avantages business</h3>
+                        <h3 class="text-lg font-bold">Monétisation</h3>
                     </div>
                     <ul class="space-y-2 text-neutral-600">
                         <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-tiktok-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Réduction des coûts d'achat de 30 à 60%</span>
+                            <span>Stratégies de revenus via TikTok Live et cadeaux</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-tiktok-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Éviter les arnaques et produits contrefaits</span>
+                            <span>Partenariats et marketing d'affiliation rentables</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-primary-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-tiktok-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Processus de dédouanement simplifié</span>
+                            <span>Vente de produits et services via la plateforme</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="inscription" class="max-w-7xl mx-auto px-4 py-16 text-center bg-gradient-to-r from-primary-blue to-primary-teal rounded-2xl text-white">
-            <h3 class="text-3xl font-bold mb-4 font-heading fade-in">Prêt à démarrer votre business d'importation ?</h3>
-            <p class="max-w-xl mx-auto mb-8 opacity-90 fade-in">Réservez votre place dès maintenant et accédez à une formation complète qui transformera la façon dont vous faites du commerce.</p>
+        <section id="inscription" class="max-w-7xl mx-auto px-4 py-16 text-center bg-gradient-to-r from-tiktok-blue to-tiktok-red rounded-2xl text-white">
+            <h3 class="text-3xl font-bold mb-4 font-heading fade-in">Prêt à faire exploser votre compte TikTok ?</h3>
+            <p class="max-w-xl mx-auto mb-8 opacity-90 fade-in">Réservez votre place dès maintenant et accédez à une formation complète qui vous transformera en influenceur et en entrepreneur sur TikTok.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
-                <button id="openEnroll" class="bg-white text-primary-blue px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors shadow-md">Réserver ma place</button>
+                <button id="openEnroll" class="bg-white text-tiktok-red px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors shadow-md">Réserver ma place</button>
                 <a href="../index.html#formations" class="px-6 py-3 rounded-md bg-white/10 hover:bg-white/20 transition-colors font-semibold border border-white/30">Voir les autres formations</a>
             </div>
         </section>
@@ -753,7 +653,7 @@
                 <div class="flex justify-between items-center mb-6">
                     <h4 class="text-2xl font-bold font-heading">Réserver une place</h4>
                     <button id="closeEnroll" class="p-1 rounded-full hover:bg-neutral-100 transition-colors">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height-24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -790,7 +690,7 @@
                         <label for="terms" class="text-sm text-neutral-600">J'accepte les <a href="#" class="text-primary-blue hover:underline">mentions légales</a> et la politique de confidentialité.</label>
                     </div>
                     
-                    <button type="submit" class="w-full cta-shimmer animate px-6 py-3 text-lg font-semibold mt-4">Confirmer ma réservation</button>
+                    <button type="submit" class="w-full cta-shimmer animate btn-ripple px-6 py-3 text-lg font-semibold mt-4">Confirmer ma réservation</button>
                 </form>
             </div>
         </div>
@@ -894,7 +794,7 @@
             const whatsappUrl = `https://wa.me/682252932?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         });
-
     </script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

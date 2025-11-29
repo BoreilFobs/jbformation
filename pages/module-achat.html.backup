@@ -3,102 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <link rel="canonical" href="https://jbformation.fobs.dev/pages/module-achat.html" />
-    
-    <title>Formation Achat en Chine (Alibaba) - Importation & Sourcing | JB Formation</title>
-    <meta name="description" content="Formation complète pour maîtriser l'achat et l'importation depuis la Chine via Alibaba. Apprenez à identifier des fournisseurs fiables, négocier et gérer la douane au Cameroun. 10 000 XAF." />
-    <meta name="keywords" content="formation alibaba, achat chine cameroun, importation chine, sourcing alibaba, fournisseurs chine, dropshipping cameroun, formation import export, douane cameroun, business import" />
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <title>Formation Achat en Chine (Alibaba) | JB Formation</title>
+    <meta name="description" content="Découvrez le programme complet de notre formation sur l'achat et l'importation de produits depuis la Chine via Alibaba." />
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Enhanced SEO Meta Tags -->
-    <meta property="og:title" content="Formation Achat en Chine (Alibaba) - Importation & Sourcing | JB Formation" />
-    <meta property="og:description" content="Maîtrisez l'achat et l'importation depuis la Chine. Formation pratique : sourcing, négociation, logistique, douane. 10 000 XAF." />
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Formation Achat en Chine (Alibaba) | JB Formation" />
+    <meta property="og:description" content="Découvrez le programme complet de notre formation sur l'achat et l'importation de produits depuis la Chine via Alibaba." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://jbformation.fobs.dev/assets/logo 2.png" />
+    <meta property="og:image" content="/assets/logo 2.png" />
     <meta property="og:url" content="https://jbformation.fobs.dev/pages/module-achat.html" />
-    <meta property="og:locale" content="fr_FR" />
-    
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Formation Achat en Chine (Alibaba) | JB Formation" />
-    <meta name="twitter:description" content="Maîtrisez l'achat et l'importation depuis la Chine. Formation pratique avec support WhatsApp inclus." />
-    <meta name="twitter:image" content="https://jbformation.fobs.dev/assets/logo 2.png" />
+    <meta name="twitter:description" content="Découvrez le programme complet de notre formation sur l'achat et l'importation de produits depuis la Chine via Alibaba." />
+    <meta name="twitter:image" content="/assets/logo 2.png" />
     <link rel="icon" type="image/png" href="/assets/logo 2.png" />
     <link rel="apple-touch-icon" href="/assets/logo 2.png" />
-    
-    <!-- JSON-LD Structured Data for Course -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Formation Achat en Chine (Alibaba)",
-      "description": "Formation complète pour maîtriser l'importation depuis la Chine : sourcing, négociation, logistique et douane au Cameroun",
-      "provider": {
-        "@type": "EducationalOrganization",
-        "name": "JB Formation",
-        "url": "https://jbformation.fobs.dev",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bafoussam",
-          "addressCountry": "CM"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "10000",
-        "priceCurrency": "XAF",
-        "availability": "https://schema.org/InStock",
-        "url": "https://jbformation.fobs.dev/pages/module-achat.html"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "online",
-        "courseWorkload": "PT0H"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "120"
-      }
-    }
-    </script>
-    
-    <!-- Breadcrumb Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://jbformation.fobs.dev/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Formations",
-          "item": "https://jbformation.fobs.dev/#formations"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Formation Achat en Chine (Alibaba)",
-          "item": "https://jbformation.fobs.dev/pages/module-achat.html"
-        }
-      ]
-    }
-    </script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Customizing Tailwind's default theme
@@ -135,13 +56,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <style>
-        :root {
-            --primary-blue: #003366;
-            --primary-teal: #00796B;
-            --accent-orange: #FF6B35;
-            --accent-purple: #6A4C93;
-            --bg-light-blue: #F0F8FF;
+    <!-- Styles personnalisés -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body class="bg-bg-light-blue text-text-dark leading-relaxed">
+
+    <!-- Skip to main content pour accessibilité clavier -->
+    <a href="#main-content" class="skip-to-main">Aller au contenu principal</a>
+
+    <header class="fixed w-full z-40 top-0 left-0 bg-white/90 backdrop-blur-sm transition-all duration-300" role="banner">
+        <div class="max-w-7xl mx-auto bg-primary-blue px-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2" aria-label="JB Formation - Retour à l'accueil">
+                <img src="../assets/logo_2-bg.png" style="width: 80px; height: auto;" alt="Logo JB Formation" loading="eager">
+                <span class="font-bold text-xl text-white font-heading">JB Formation</span>
+            </a>
+
+            <nav class="hidden md:flex gap-6" role="navigation" aria-label="Navigation principale">
         }
 
         /* Accessibility: Focus visible */
@@ -451,7 +381,7 @@
                 <a href="../index.html#about" class="hover:text-primary-blue transition-colors font-medium">À propos</a>
                 <a href="../index.html#testimonials" class="hover:text-primary-blue transition-colors font-medium">Témoignages</a>
                 <a href="../index.html#faq" class="hover:text-primary-blue transition-colors font-medium">FAQ</a>
-                <button id="reserveTop" class="cta-shimmer animate ml-2 text-sm">Réserver</button>
+                <button id="reserveTop" class="cta-shimmer animate btn-ripple ml-2 text-sm">Réserver</button>
             </nav>
         </div>
     </header>
@@ -488,60 +418,23 @@
                 <a href="../index.html#about" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">À propos</a>
                 <a href="../index.html#testimonials" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">Témoignages</a>
                 <a href="../index.html#faq" class="font-medium py-3 px-4 rounded-lg hover:bg-neutral-100 transition-colors">FAQ</a>
-                <button id="reserveTopMobile" class="mt-4 cta-shimmer animate w-full py-3">Réserver ma place</button>
+                <button id="reserveTopMobile" class="mt-4 cta-shimmer animate btn-ripple w-full py-3">Réserver ma place</button>
             </nav>
         </aside>
     </div>
 
     <main id="main-content" class="pt-24 md:pt-28" role="main">
 
-        <!-- Breadcrumb Navigation -->
-        <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 py-4">
-            <ol class="flex items-center space-x-2 text-sm text-neutral-600">
-                <li>
-                    <a href="../index.html" class="hover:text-primary-blue transition-colors flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                        </svg>
-                        Accueil
-                    </a>
-                </li>
-                <li><span class="text-neutral-400">/</span></li>
-                <li>
-                    <a href="../index.html#formations" class="hover:text-primary-blue transition-colors">Formations</a>
-                </li>
-                <li><span class="text-neutral-400">/</span></li>
-                <li class="text-primary-blue font-medium" aria-current="page">Achat en Chine (Alibaba)</li>
-            </ol>
-        </nav>
-
         <section class="bg-gradient-to-r from-primary-blue to-primary-teal text-white py-16 section-pattern">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold shadow-md mb-6 animate-pulse">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
-                    </svg>
-                    Programme complet • Accès à vie
-                </div>
                 <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight font-heading fade-in">
                     Formation <span class="text-white">Achat en Chine</span> (Alibaba)
                 </h1>
                 <p class="text-neutral-100 text-lg mt-4 max-w-2xl mx-auto fade-in">
-                    Devenez un pro de l’importation. Apprenez à identifier des fournisseurs fiables, à négocier et à sécuriser vos livraisons depuis la Chine vers le Cameroun.
+                    Devenez un pro de l'importation. Apprenez à identifier des fournisseurs fiables, à négocier et à sécuriser vos livraisons depuis la Chine vers le Cameroun.
                 </p>
-                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 fade-in">
-                    <a href="#programme" class="cta-shimmer animate text-base px-6 py-3 inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        Découvrir le programme
-                    </a>
-                    <button id="openEnroll" class="px-6 py-3 bg-white text-primary-blue rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        Réserver maintenant
-                    </button>
+                <div class="mt-8 flex justify-center fade-in">
+                    <a href="#programme" class="cta-shimmer animate btn-ripple text-base px-6 py-3">Découvrir le programme</a>
                 </div>
             </div>
         </section>
@@ -790,7 +683,7 @@
                         <label for="terms" class="text-sm text-neutral-600">J'accepte les <a href="#" class="text-primary-blue hover:underline">mentions légales</a> et la politique de confidentialité.</label>
                     </div>
                     
-                    <button type="submit" class="w-full cta-shimmer animate px-6 py-3 text-lg font-semibold mt-4">Confirmer ma réservation</button>
+                    <button type="submit" class="w-full cta-shimmer animate btn-ripple px-6 py-3 text-lg font-semibold mt-4">Confirmer ma réservation</button>
                 </form>
             </div>
         </div>
@@ -896,5 +789,6 @@
         });
 
     </script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

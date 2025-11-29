@@ -1,0 +1,273 @@
+/* Additional UI Enhancements */
+
+/* Improved button hover effects */
+.cta-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-shimmer:hover::before {
+    left: 100%;
+}
+
+/* Improved card shadows on hover */
+.pricing-card,
+.feature-card,
+.stat-card,
+.module-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card:hover,
+.feature-card:hover,
+.stat-card:hover,
+.module-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+/* Improved focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #FF6B35;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* Loading animation for images */
+img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Improved testimonial cards */
+.testimonial-slide {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-left: 4px solid var(--primary-teal);
+}
+
+/* Better mobile menu animation */
+@media (max-width: 768px) {
+    .mobile-menu {
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Pulse animation for urgency elements */
+@keyframes gentle-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.animate-pulse {
+    animation: gentle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background-size: 200% auto;
+    animation: gradient-shift 3s ease infinite;
+}
+
+/* Improved WhatsApp button */
+.whatsapp-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.whatsapp-float:hover {
+    animation: none;
+}
+
+/* Better stat cards */
+.stat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 51, 102, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+/* Improved form inputs */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus {
+    transform: translateY(-2px);
+}
+
+/* Better breadcrumb styling */
+nav[aria-label="Breadcrumb"] ol {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Improved section transitions */
+section {
+    transition: opacity 0.3s ease;
+}
+
+/* Better FAQ accordion */
+.faq-panel {
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-panel.open {
+    padding-top: 0.5rem;
+}
+
+/* Smooth modal transitions */
+.modal-container {
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Improved timeline styling */
+.timeline::before {
+    box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.1);
+}
+
+.timeline-item::before {
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(0, 51, 102, 0.1);
+}
+
+/* Better loading screen */
+.loading-screen {
+    background: linear-gradient(135deg, #003366 0%, #00796B 100%);
+}
+
+.loader {
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+/* Print styles */
+@media print {
+    .whatsapp-float,
+    .mobile-menu,
+    #enrollModal,
+    header,
+    .cta-shimmer {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .section-pattern::before {
+        display: none;
+    }
+}
+
+/* Dark mode support (if enabled) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light-blue: #1a1a1a;
+        --text-dark: #e5e5e5;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .cta-shimmer {
+        border: 2px solid currentColor;
+    }
+    
+    .pricing-card,
+    .feature-card,
+    .module-card {
+        border: 2px solid currentColor;
+    }
+}
